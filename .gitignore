@@ -1,0 +1,17 @@
+.*
+*.egg-info
+*.pyc
+*.swp
+.env
+coverage.xml
+build/
+dist/
+docs/_build/
+static-collected/
+emails/
+whoosh_index/
+!.coveragerc
+!.gitignore
+*.sublime-workspace
+*.sublime-project
+cireg/media/

@@ -1,0 +1,10 @@
+pip # get rid of annoying pip messages
+
+# Django
+# ------------------------------------------------------------------------------
+django<2.1  # pyup: < 2.1  # https://www.djangoproject.com/
+django-environ==0.4.5  # https://github.com/joke2k/django-environ
+argon2-cffi==18.1.0  # https://github.com/hynek/argon2_cffi
+# Wagtail
+wagtail<2.3
+wagtailfontawesome==1.1.3
