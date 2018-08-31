@@ -52,4 +52,4 @@ Deployment
 
 The following details how to deploy this application.
 
-    $ fab production deploy
+  $ fab production deploy
