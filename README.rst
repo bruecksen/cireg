@@ -1,7 +1,7 @@
 CIREG
 =====
 
-Project that powers the website of the ICIREG project.
+Project that powers the website of the CIREG project.
 
 
 
@@ -53,5 +53,3 @@ Deployment
 The following details how to deploy this application.
 
     $ fab production deploy
-or
-    $ fab staging deploy
