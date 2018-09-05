@@ -15,3 +15,4 @@ whoosh_index/
 *.sublime-workspace
 *.sublime-project
 cireg/media/
+node_modules/
