@@ -1,0 +1,39 @@
+{% load static %}
+<header>
+<nav class="navbar navbar-expand-sm fixed-top navbar-meta">
+    <div class="container">
+        <div class="collapse navbar-collapse justify-content-end" id="meta-nav">
+            <ul class="navbar-nav">
+                {% for menu_item in meta_menu %}
+                  <li class="nav-item{% if menu_item.active %} active{% endif %}">
+                    <a class="nav-link" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+                  </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-main">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="{% static 'images/Logo_Large_On_Dark.svg' %}" class="d-inline-block align-top" alt="">
+        </a>
+        <hr>
+        <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav">
+                {% for menu_item in main_menu %}
+                  <li class="nav-item{% if menu_item.active %} active{% endif %}{% if menu_item.children %} dropdown{% endif %}">
+                    <a class="nav-link{% if menu_item.children %} dropdown-toggle{% endif %}" href="{{ menu_item.url }}"{% if menu_item.children %}role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>{{ menu_item.text }}</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    </nav>
+</header>

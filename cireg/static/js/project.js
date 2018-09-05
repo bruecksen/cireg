@@ -19,3 +19,8 @@ Issues with the above approach:
 4. Undocumented: No mention in the documentation, or it's too hard for me to find
 */
 $('.form-group').removeClass('row');
+
+$(".project-diary .card").click(function() {
+  window.location = $(this).find("a").attr("href"); 
+  return false;
+});

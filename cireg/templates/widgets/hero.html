@@ -1,0 +1,17 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+<div id="hero-slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      {% for item in page.image_items.all %}
+          {% image item.image original as image %}
+          <div class="carousel-item active" style="background-image: url('{{ image.url }}');">
+          </div>
+      {% endfor %}
+    </div>
+    <div class="intro col-6 offset-3">
+        {{ page.hero_text|richtext }}
+        {% if page.hero_page_link %}
+            <a href="{{ page.hero_page_link.url }}" class="btn btn-primary">{{ page.hero_page_link_text }}</a>
+        {% endif %}
+    </div>
+
+</div>

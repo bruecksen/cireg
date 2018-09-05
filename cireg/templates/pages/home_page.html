@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags static i18n %}
+
+
+{% block content %}
+    {% include "widgets/hero.html" %}
+    <section class="project-diary-section">
+        <div class="container project-diary">
+            <h3 class="chapter">{% trans "Latest project diary" %}</h3>
+            <div class="row">
+            {% for project_diary in project_diary_entries %}
+                {% include "widgets/project_diary_teaser.html" %}
+            {% endfor %}
+            </div>
+            <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-secondary show-all ">{% trans "Show All Project Diaries" %}</a>
+            </div>
+        </div>
+    </section>
+    <section class="case-studies-section">
+        <div class="container case-studies">
+            <h3 class="chapter">{% trans "Case studies" %}</h3>
+            <div class="row">
+            {% for case_study in case_studies %}
+                {% include "widgets/case_study_teaser.html" with count=case_studies|length %}
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

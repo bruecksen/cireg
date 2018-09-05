@@ -77,10 +77,13 @@ THIRD_PARTY_APPS = [
     'modelcluster',
     'taggit',
     'wagtailfontawesome',
+    'wagtailtrans',
 ]
 LOCAL_APPS = [
     'cireg.core.apps.CoreConfig',
     # Your stuff: custom apps go here
+    'cireg.cms',
+    'cireg.contrib',
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
