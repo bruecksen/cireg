@@ -24,3 +24,12 @@ $(".project-diary .card").click(function() {
   window.location = $(this).find("a").attr("href"); 
   return false;
 });
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 50) {
+        $('header').addClass('medium');
+        $('header').removeClass('large');
+    } else {
+        $('header').addClass('large');
+        $('header').removeClass('medium');
+    }
+});

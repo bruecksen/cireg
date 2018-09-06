@@ -17,7 +17,7 @@
     
     <!-- Latest compiled and minified Bootstrap 4 CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    
+
 
     <!-- Your stuff: Third-party CSS libraries go here -->
     
@@ -33,7 +33,7 @@
   <body>
 
   {% block header %}
-      {% header show_banner=False fixed_top=True %}
+      {% header header_size="large" %}
   {% endblock %}
     {% if messages %}
     <div class="container">

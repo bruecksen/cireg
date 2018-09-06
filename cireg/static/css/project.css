@@ -239,58 +239,122 @@ h3.chapter {
 .content {
   padding-top: 30px; }
 
-.navbar-meta {
-  background-color: #f7f7f7;
-  font-size: 14px;
-  padding: 0;
-  font-weight: 500; }
-  .navbar-meta .nav-item {
-    margin-left: 22px; }
-    .navbar-meta .nav-item .nav-link {
-      padding-top: 8px;
-      padding-bottom: 7px;
-      line-height: 1.14;
-      color: #6c909e;
-      text-transform: uppercase; }
-    .navbar-meta .nav-item.active a {
-      color: #0c638d;
-      font-weight: 600; }
-
-.dropdown-toggle::after {
-  margin-left: .255em;
-  vertical-align: .155em;
-  border-top: .25em solid;
-  border-right: .25em solid transparent;
-  border-left: .25em solid transparent; }
-
-.navbar-main {
+header .navbar-main {
   top: 30px;
   padding-top: 37px;
   padding-bottom: 37px;
   font-size: 20px;
   font-weight: 200;
   font-family: 'Assistant'; }
-  .navbar-main .container {
+  header .navbar-main .container {
     position: relative; }
-  .navbar-main hr {
+  header .navbar-main .navbar-brand img.large {
+    display: inline-block; }
+  header .navbar-main .navbar-brand img.medium {
+    display: none; }
+  header .navbar-main hr {
     position: absolute;
     border-top: 1px solid #ccd3d7;
     width: 78%;
     top: 71px;
     right: 0; }
-  .navbar-main .nav-item {
+  header .navbar-main .nav-item {
     margin-left: 22px; }
-    .navbar-main .nav-item .nav-link {
+    header .navbar-main .nav-item .nav-link {
       padding-top: 8px;
       padding-bottom: 7px;
       line-height: 1.14;
       color: #ffffff; }
-    .navbar-main .nav-item.active a {
+    header .navbar-main .nav-item.active {
       font-weight: 600; }
-  .navbar-main .navbar-collapse {
+  header .navbar-main .navbar-collapse {
     position: absolute;
     top: 40px;
     right: 0; }
+
+header .navbar-meta {
+  background-color: #f7f7f7;
+  font-size: 14px;
+  padding: 0;
+  font-weight: 500; }
+  header .navbar-meta .nav-item {
+    margin-left: 22px; }
+    header .navbar-meta .nav-item .nav-link {
+      padding-top: 8px;
+      padding-bottom: 7px;
+      line-height: 1.14;
+      color: #6c909e;
+      text-transform: uppercase; }
+    header .navbar-meta .nav-item.active {
+      color: #0c638d;
+      font-weight: 600; }
+
+header.medium .navbar-meta {
+  display: none; }
+
+header.medium .navbar-main {
+  background-color: #032738;
+  top: 0;
+  padding-top: 23px;
+  padding-bottom: 18px; }
+  header.medium .navbar-main .navbar-collapse {
+    top: 0; }
+  header.medium .navbar-main hr {
+    width: 81%;
+    top: 29px; }
+  header.medium .navbar-main .navbar-brand img.medium {
+    display: inline-block; }
+  header.medium .navbar-main .navbar-brand img.large {
+    display: none; }
+
+.nav-item.dropdown .dropdown-toggle:after {
+  margin-left: .255em;
+  vertical-align: .155em;
+  border-top: .25em solid;
+  border-right: .25em solid transparent;
+  border-left: .25em solid transparent; }
+
+.nav-item.dropdown.show .dropdown-toggle:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.nav-item.dropdown.show .nav-link {
+  z-index: 2000;
+  color: #032738;
+  position: relative; }
+
+.nav-item.dropdown .dropdown-menu {
+  top: 0;
+  right: -16px;
+  right: -1rem;
+  background-color: #f7f7f7;
+  padding-top: 39px;
+  width: calc(100% + 2rem); }
+  .nav-item.dropdown .dropdown-menu .dropdown-item {
+    font-size: 16px;
+    color: #032738;
+    font-weight: normal;
+    padding: 8px 24px;
+    padding: .5rem 1.5rem; }
+    .nav-item.dropdown .dropdown-menu .dropdown-item:first-child {
+      border-top: 1px solid #ccd3d7; }
+    .nav-item.dropdown .dropdown-menu .dropdown-item.active {
+      background-color: #e6e9eb;
+      font-weight: 600;
+      color: #0c638d; }
+      .nav-item.dropdown .dropdown-menu .dropdown-item.active:before {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        content: "";
+        margin-right: .255em;
+        vertical-align: .155em;
+        border-top: .25em solid;
+        border-right: .25em solid transparent;
+        border-left: .25em solid transparent;
+        border-bottom: 0;
+        -webkit-transform: rotate(270deg);
+                transform: rotate(270deg); }
 
 #hero-slider .carousel-item {
   height: 100vh;
@@ -394,6 +458,6 @@ section.project-diary-section {
     font-family: 'Assistant', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #cf8e17;
+    color: #eea00a;
     text-transform: uppercase;
     line-height: 1.5; }
