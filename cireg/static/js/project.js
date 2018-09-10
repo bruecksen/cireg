@@ -24,12 +24,22 @@ $(".project-diary .card").click(function() {
   window.location = $(this).find("a").attr("href"); 
   return false;
 });
-$(window).scroll(function(){
-    if ($(this).scrollTop() > 50) {
+$(".case-studies .card").click(function() {
+  window.location = $(this).find("a").attr("href"); 
+  return false;
+});
+function switch_menu(body) {
+    if ($(body).scrollTop() > 50) {
         $('header').addClass('medium');
         $('header').removeClass('large');
     } else {
         $('header').addClass('large');
         $('header').removeClass('medium');
     }
+}
+$(document).ready(function() {
+    switch_menu(this);
+})
+$(window).scroll(function(){
+    switch_menu(this);
 });

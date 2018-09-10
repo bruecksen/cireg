@@ -25,7 +25,7 @@ $grey500: #f7f7f7;
 
 
 html, body {
-	font-size: 10px;
+	font-size: 16px;
 	font-family: 'Assistant', sans-serif;
 }
 
@@ -193,17 +193,28 @@ h3.chapter {
 	}
 }
 
+.form-group.required label:after {
+	content: "*";
+	color: red;
+}
+
 .content {
 	padding-top: 30px;
 }
 header {
 	.navbar-main {
+		height: 308px;
 		top: 30px;
 		padding-top: 37px;
 		padding-bottom: 37px;
 		font-size: 20px;
 		font-weight: 200;
 		font-family: 'Assistant';
+		/*Animation*/
+		    // -moz-transition: background-color 1s ease;
+		    //   -o-transition: height 1s ease;
+		    //  -ms-transition: height 1s ease;
+		         
 		.container {
 			position: relative;
 		}
@@ -245,6 +256,9 @@ header {
 		font-size: 14px;
 		padding: 0;
 		font-weight: 500;
+		overflow: hidden;
+		height: 30px;
+		transition: height 0.5s ease-out;
 		.nav-item {
 			margin-left: 22px;
 			.nav-link {
@@ -261,11 +275,18 @@ header {
 			
 		}
 	}
+	&.large {
+		.navbar-main {
+			transition: unset;
+		}
+	}
 	&.medium {
 		.navbar-meta {
 			display: none;
 		}
 		.navbar-main {
+			transition: background-color .4s ease-out;
+			height: 90px;
 			background-color: $blue100;
 			top: 0;
 			padding-top: 23px;
@@ -288,6 +309,7 @@ header {
 		}
 	}
 }
+
 // #### DROPDOWN MENU
 .nav-item.dropdown {
 	.dropdown-toggle:after {
@@ -343,6 +365,32 @@ header {
 	}
 }
 
+footer {
+	.logos {
+		padding: 16px 0;
+		img {
+			max-height: 50px;
+		}
+		a:not(:first-child) {
+			margin-left: 60px;
+		}
+	}
+	.navbar-footer {
+		background-color: $blue100;
+		font-size: 14px;
+		padding: 0;
+		font-weight: 600;
+		min-height: 60px;
+		.nav-item {
+			margin-right: 40px;
+			font-weight: 300;
+			.nav-link {
+				color: $grey500;
+			}
+		}
+	}
+}
+
 #hero-slider {
 	.carousel-item {
 		height: 100vh;
@@ -381,7 +429,8 @@ header {
 	}
 }
 
-section.project-diary-section {
+section.project-diary-section,
+section.newsletter {
 	background-color: $grey500;
 }
 
@@ -427,6 +476,7 @@ section.project-diary-section {
 	.card {
 		border: none;
 		position: relative;
+		cursor: pointer;
 	}
 	.card-box {
 		padding: 1.5rem 2.5rem;
@@ -441,6 +491,9 @@ section.project-diary-section {
 			top: 50%;
 			transform: translateY(-50%);
 		}
+	}
+	a:hover {
+		text-decoration: none;
 	}
 	h5, h6 {
 		margin-left: 110px;
@@ -460,5 +513,31 @@ section.project-diary-section {
 		color: $orange200;
 		text-transform: uppercase;
 		line-height: 1.5;
+	}
+}
+.newsletter {
+	padding-top: 60px;
+	padding-bottom: 120px;
+	h2 {
+		font-size: 32px;
+		font-weight: 900;
+		margin-bottom: 1.5rem;
+	}
+	p {
+		font-size: 16px;
+		line-height: 1.63;
+	}
+	form {
+		margin-top: 60px;
+	}
+	.btn-primary {
+		margin-top: 60px;
+		background-color: $orange100;
+		border-color: $orange100;
+		color: $white;
+		&:hover {
+			background-color: $white;
+			color: $orange100;
+		}
 	}
 }

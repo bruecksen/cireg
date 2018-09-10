@@ -79,7 +79,7 @@
   /* Legacy iOS */ }
 
 html, body {
-  font-size: 10px;
+  font-size: 16px;
   font-family: 'Assistant', sans-serif; }
 
 h1 {
@@ -236,16 +236,22 @@ h3.chapter {
     background: transparent;
     border-color: #cf8e17; }
 
+.form-group.required label:after {
+  content: "*";
+  color: red; }
+
 .content {
   padding-top: 30px; }
 
 header .navbar-main {
+  height: 308px;
   top: 30px;
   padding-top: 37px;
   padding-bottom: 37px;
   font-size: 20px;
   font-weight: 200;
-  font-family: 'Assistant'; }
+  font-family: 'Assistant';
+  /*Animation*/ }
   header .navbar-main .container {
     position: relative; }
   header .navbar-main .navbar-brand img.large {
@@ -276,7 +282,11 @@ header .navbar-meta {
   background-color: #f7f7f7;
   font-size: 14px;
   padding: 0;
-  font-weight: 500; }
+  font-weight: 500;
+  overflow: hidden;
+  height: 30px;
+  -webkit-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out; }
   header .navbar-meta .nav-item {
     margin-left: 22px; }
     header .navbar-meta .nav-item .nav-link {
@@ -289,10 +299,17 @@ header .navbar-meta {
       color: #0c638d;
       font-weight: 600; }
 
+header.large .navbar-main {
+  -webkit-transition: unset;
+  transition: unset; }
+
 header.medium .navbar-meta {
   display: none; }
 
 header.medium .navbar-main {
+  -webkit-transition: background-color .4s ease-out;
+  transition: background-color .4s ease-out;
+  height: 90px;
   background-color: #032738;
   top: 0;
   padding-top: 23px;
@@ -356,6 +373,25 @@ header.medium .navbar-main {
         -webkit-transform: rotate(270deg);
                 transform: rotate(270deg); }
 
+footer .logos {
+  padding: 16px 0; }
+  footer .logos img {
+    max-height: 50px; }
+  footer .logos a:not(:first-child) {
+    margin-left: 60px; }
+
+footer .navbar-footer {
+  background-color: #032738;
+  font-size: 14px;
+  padding: 0;
+  font-weight: 600;
+  min-height: 60px; }
+  footer .navbar-footer .nav-item {
+    margin-right: 40px;
+    font-weight: 300; }
+    footer .navbar-footer .nav-item .nav-link {
+      color: #f7f7f7; }
+
 #hero-slider .carousel-item {
   height: 100vh;
   max-height: 75vh;
@@ -388,7 +424,8 @@ header.medium .navbar-main {
     margin-top: 32px;
     margin-top: 2rem; }
 
-section.project-diary-section {
+section.project-diary-section,
+section.newsletter {
   background-color: #f7f7f7; }
 
 .project-diary {
@@ -429,7 +466,8 @@ section.project-diary-section {
   padding-bottom: 150px; }
   .case-studies .card {
     border: none;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
   .case-studies .card-box {
     padding: 24px 40px;
     padding: 1.5rem 2.5rem;
@@ -445,6 +483,8 @@ section.project-diary-section {
       top: 50%;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
+  .case-studies a:hover {
+    text-decoration: none; }
   .case-studies h5, .case-studies h6 {
     margin-left: 110px;
     margin-bottom: 0; }
@@ -461,3 +501,25 @@ section.project-diary-section {
     color: #eea00a;
     text-transform: uppercase;
     line-height: 1.5; }
+
+.newsletter {
+  padding-top: 60px;
+  padding-bottom: 120px; }
+  .newsletter h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem; }
+  .newsletter p {
+    font-size: 16px;
+    line-height: 1.63; }
+  .newsletter form {
+    margin-top: 60px; }
+  .newsletter .btn-primary {
+    margin-top: 60px;
+    background-color: #cf8e17;
+    border-color: #cf8e17;
+    color: #ffffff; }
+    .newsletter .btn-primary:hover {
+      background-color: #ffffff;
+      color: #cf8e17; }

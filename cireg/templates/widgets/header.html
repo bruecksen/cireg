@@ -1,39 +1,39 @@
 {% load static %}
 <header class="{{ header_size }}">
-<nav class="navbar navbar-expand-sm fixed-top navbar-meta">
-    <div class="container">
-        <div class="collapse navbar-collapse justify-content-end" id="meta-nav">
-            <ul class="navbar-nav">
-                {% for menu_item in meta_menu %}
-                  <li class="nav-item{% if menu_item.active %} active{% endif %}">
-                    <a class="nav-link" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
-                  </li>
-                {% endfor %}
-            </ul>
+    <nav class="navbar navbar-expand-sm fixed-top navbar-meta">
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-end" id="meta-nav">
+                <ul class="navbar-nav">
+                    {% for menu_item in meta_menu %}
+                      <li class="nav-item{% if menu_item.active %} active{% endif %}">
+                        <a class="nav-link" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+                      </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
     <nav class="navbar navbar-expand-lg fixed-top navbar-main">
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="{% static 'images/Logo_Large_On_Dark.svg' %}" class="align-top large" alt="">
-            <img src="{% static 'images/Logo_Medium_On_Dark.svg' %}" class="align-top medium" alt="">
-        </a>
-        <hr>
-        <div class="collapse navbar-collapse" id="main-nav">
-            <ul class="navbar-nav">
-                {% for menu_item in main_menu %}
-                  <li class="nav-item{% if menu_item.active %} active{% endif %}{% if menu_item.children %} dropdown{% endif %}">
-                    <a class="nav-link{% if menu_item.children %} dropdown-toggle{% endif %}" href="{{ menu_item.url }}"{% if menu_item.children %}role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>{{ menu_item.text }}</a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        {% for child in menu_item.children %}
-                            <a class="dropdown-item{% if child.active %} active{% endif %}" href="{{ child.url }}">{{ child.text }}</a>
-                        {% endfor %}
-                    </div>
-                  </li>
-                {% endfor %}
-            </ul>
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{% static 'images/Logo_Large_On_Dark.svg' %}" class="align-top large" alt="">
+                <img src="{% static 'images/Logo_Medium_On_Dark.svg' %}" class="align-top medium" alt="">
+            </a>
+            <hr>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav">
+                    {% for menu_item in main_menu %}
+                      <li class="nav-item{% if menu_item.active %} active{% endif %}{% if menu_item.children %} dropdown{% endif %}">
+                        <a class="nav-link{% if menu_item.children %} dropdown-toggle{% endif %}" href="{{ menu_item.url }}"{% if menu_item.children %}role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>{{ menu_item.text }}</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            {% for child in menu_item.children %}
+                                <a class="dropdown-item{% if child.active %} active{% endif %}" href="{{ child.url }}">{{ child.text }}</a>
+                            {% endfor %}
+                        </div>
+                      </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-    </div>
     </nav>
 </header>

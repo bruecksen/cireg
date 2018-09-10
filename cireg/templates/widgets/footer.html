@@ -1,0 +1,25 @@
+{% load static %}
+<footer>
+    <div class="logos text-center">
+        <a href="http://www.jpi-climate.eu/ERA4CS" target="_blank"><img src="{% static "images/era4cs.png" %}" class="img-fluid"></a>
+        <a href="http://www.jpi-climate.eu" target="_blank"><img src="{% static "images/jpi_climate.jpg" %}" class="img-fluid"></a>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-footer">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="footer-nav">
+                <ul class="navbar-nav mr-auto">
+                    {% for menu_item in footer_menu %}
+                      <li class="nav-item{% if menu_item.active %} active{% endif %}">
+                        <a class="nav-link" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+                      </li>
+                    {% endfor %}
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="twitter.com" target="_blank"><img src="{% static 'images/twitter-brands.svg' %}" class="align-top large" alt="" width="22"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</footer>

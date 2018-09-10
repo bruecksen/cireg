@@ -51,3 +51,20 @@ def header(context, *args, **kwargs):
     context.update(kwargs)
     template = 'widgets/header.html'
     return render_to_string(template, context=context.flatten())
+
+
+@register.simple_tag(takes_context=True)
+def footer(context, *args, **kwargs):
+    language = context['page'].specific.language
+    footer_menu = Menu.objects.get(language=language, menu_type=Menu.FOOTER_MENU)
+
+    page = context.get('page')
+
+    context['footer_menu'] = menu_as_context(footer_menu, page)
+    context['language'] = language
+
+    translations = page.get_translations(include_self=True)
+    context['translations'] = translations
+    context.update(kwargs)
+    template = 'widgets/footer.html'
+    return render_to_string(template, context=context.flatten())

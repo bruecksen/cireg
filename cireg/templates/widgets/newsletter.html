@@ -1,0 +1,41 @@
+{% load i18n %}
+<section class="newsletter">
+    <div class="row">
+        <div class="col-6 offset-3">
+        <h2 class="text-center">{% trans "Stay up to date with our Newsletter" %}</h2>
+        <p class="text-center">Subscribe to our newsletter and stay up to date on the latest development and updates from CIREG and our Project & Partners. We normally send out newsletter every two to three month.</p>
+        </div>
+    </div>
+    <form action="https://pik-potsdam.us19.list-manage.com/subscribe/post?u=4bf4ed0443b09d27bd4afa7e0&amp;id=fcd0978b7e" method="post" target="_blank">
+    <div class="form-row">
+            <div class="col-2 offset-2">
+                <div class="form-group required">
+                    <label for="mce-EMAIL">Email address</label>
+                    <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" aria-describedby="emailHelp" placeholder="Your email" required>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="mce-FNAME">First Name</label>
+                    <input type="text" name="FNAME" class="form-control" id="mce-FNAME" aria-describedby="emailHelp" placeholder="Your first name">
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="mce-LNAME">Last Name</label>
+                    <input type="text" name="LNAME" class="form-control" id="mce-LNAME" aria-describedby="emailHelp" placeholder="Your last name">
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label for="mce-MMERGE5">Company</label>
+                    <input type="text" name="MMERGE5" class="form-control" id="mce-MMERGE5" aria-describedby="emailHelp" placeholder="Your company name">
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <button type="submit" class="mx-auto btn btn-primary">Subscribe to Newsletter</button>
+    </div>
+    </form>
+
+</section>
