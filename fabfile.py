@@ -17,7 +17,8 @@ def staging():
 def production():
     projectname = 'cireg'
     basepath = '/webservice/%s'
-    env.hosts = ['sws@cireg.pik-potsdam.de']
+    env.user = 'django'
+    env.hosts = ['django@cireg.pik-potsdam.de']
     env.path = basepath % projectname
     env.virtualenv_path = basepath % (projectname + 'env')
     env.push_branch = 'master'
@@ -51,7 +52,7 @@ def deploy():
 def pip():
     with cd(env.path):
         run("git pull %(push_remote)s %(push_branch)s" % env)
-        run("pipenv update")
+        run("pipenv install --deploy")
     reload_webserver()
 
 

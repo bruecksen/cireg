@@ -79,7 +79,7 @@
   /* Legacy iOS */ }
 
 html, body {
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Assistant', sans-serif;
   color: #032738; }
 
@@ -147,30 +147,6 @@ h6 {
   font-style: normal;
   letter-spacing: 0em; }
 
-h1 + p {
-  margin-top: -38.4px;
-  margin-top: -2.4rem; }
-
-h2 + p {
-  margin-top: -38.4px;
-  margin-top: -2.4rem; }
-
-h3 + p {
-  margin-top: -38.4px;
-  margin-top: -2.4rem; }
-
-h4 + p {
-  margin-top: -38.4px;
-  margin-top: -2.4rem; }
-
-h5 + p {
-  margin-top: -38.4px;
-  margin-top: -2.4rem; }
-
-h6 + p {
-  margin-top: -38.4px;
-  margin-top: -2.4rem; }
-
 h3.chapter {
   font-size: 20px;
   font-family: 'Assistant', sans-serif;
@@ -202,8 +178,9 @@ h3.chapter {
   margin-bottom: 48px;
   margin-bottom: 3rem; }
   .block-lead_text p {
-    font-size: 20px;
-    line-height: 1.5; }
+    font-size: 26px;
+    line-height: 1.42;
+    font-weight: 600; }
 
 .btn-primary {
   border-radius: 4px;
@@ -241,6 +218,10 @@ h3.chapter {
     color: #cf8e17;
     background: transparent;
     border-color: #cf8e17; }
+
+.form-control,
+label {
+  font-size: 16px; }
 
 .form-group.required label:after {
   content: "*";

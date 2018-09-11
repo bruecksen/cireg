@@ -25,7 +25,7 @@ $grey500: #f7f7f7;
 
 
 html, body {
-	font-size: 16px;
+	font-size: 20px;
 	font-family: 'Assistant', sans-serif;
 	color: $blue100;
 }
@@ -100,29 +100,29 @@ h6 {
 // 	letter-spacing: 0em;
 // }
 
-h1 + p {
-	margin-top: -2.4rem;
-}
+// h1 + p {
+// 	margin-top: -2.4rem;
+// }
 
-h2 + p {
-	margin-top: -2.4rem;
-}
+// h2 + p {
+// 	margin-top: -2.4rem;
+// }
 
-h3 + p {
-	margin-top: -2.4rem;
-}
+// h3 + p {
+// 	margin-top: -2.4rem;
+// }
 
-h4 + p {
-	margin-top: -2.4rem;
-}
+// h4 + p {
+// 	margin-top: -2.4rem;
+// }
 
-h5 + p {
-	margin-top: -2.4rem;
-}
+// h5 + p {
+// 	margin-top: -2.4rem;
+// }
 
-h6 + p {
-	margin-top: -2.4rem;
-}
+// h6 + p {
+// 	margin-top: -2.4rem;
+// }
 
 h3.chapter {
 	font-size: 20px;
@@ -156,8 +156,9 @@ h3.chapter {
 
 .block-lead_text {
 	p {
-		font-size: 20px;
-		line-height: 1.5;
+		font-size: 26px;
+		line-height: 1.42;
+		font-weight: 600;
 	}
 	margin-bottom: 3rem; 
 }
@@ -202,6 +203,10 @@ h3.chapter {
 	}
 }
 
+.form-control,
+label {
+	font-size: 16px;
+}
 .form-group.required label:after {
 	content: "*";
 	color: red;

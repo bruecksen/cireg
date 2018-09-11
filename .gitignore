@@ -16,3 +16,4 @@ whoosh_index/
 *.sublime-project
 cireg/media/
 node_modules/
+gunicorn.pid
