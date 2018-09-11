@@ -51,15 +51,12 @@ def deploy():
 def pip():
     with cd(env.path):
         run("git pull %(push_remote)s %(push_branch)s" % env)
-        with prefix("source %(virtualenv_path)s/bin/activate" % env):
-            run("pip install -Ur requirements/production.txt")
-
+        run("pipenv update")
     reload_webserver()
 
 
 def soft_deploy():
     with cd(env.path):
         run("git pull %(push_remote)s %(push_branch)s" % env)
-
     reload_webserver()
     ping()
