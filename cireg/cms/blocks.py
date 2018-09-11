@@ -33,10 +33,16 @@ class TextAndFactsBlock(StructBlock):
         label = 'Text and facts'
 
 
+class LeadText(RichTextBlock):
+    class Meta:
+        template = 'blocks/lead_text.html'
+
+
 PAGE_BLOCKS = [
     ('icon_heading_block', IconHeadingBlock()),
     ('heading_block', HeadingBlock()),
     ('text', RichTextBlock()),
+    ('lead_text', LeadText()),
 ]
 
 CASE_STUDY_BLOCKS = [

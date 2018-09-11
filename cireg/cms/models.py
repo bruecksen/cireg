@@ -114,3 +114,5 @@ class ContentPage(TranslatablePage, Page):
     content_panels = Page.content_panels + [
         StreamFieldPanel('content', classname="full"),
     ]
+
+    template = 'pages/content_page.html'

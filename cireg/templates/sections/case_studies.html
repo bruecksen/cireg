@@ -1,0 +1,11 @@
+{% load i18n %}
+<section class="case-studies-section">
+    <div class="container case-studies">
+        <h3 class="chapter">{% trans "Case studies" %}</h3>
+        <div class="row">
+        {% for case_study in case_studies %}
+            {% include "widgets/case_study_teaser.html" with count=case_studies|length %}
+        {% endfor %}
+        </div>
+    </div>
+</section>

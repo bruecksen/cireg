@@ -27,26 +27,27 @@ $grey500: #f7f7f7;
 html, body {
 	font-size: 16px;
 	font-family: 'Assistant', sans-serif;
+	color: $blue100;
 }
 
 h1 {
-	margin-bottom: 3.4rem;
+	margin-bottom: 1.4rem;
 	font-family: 'Martel', serif;
-	font-size: 7.425860000000002em;
-	line-height: 10.2rem;
+	font-size: 57px;
+	line-height: 1.05;
 	font-weight: 900;
 	font-style: normal;
-	letter-spacing: 0em;
+	color: $blue200;
 }
 
 h2 {
-	margin-bottom: 3.4rem;
+	margin-bottom: 2rem;
 	font-family: 'Martel', serif;
-	font-size: 5.712200000000001em;
-	line-height: 6.8rem;
+	font-size: 44px;
+	line-height: 1.37;
 	font-weight: 900;
 	font-style: normal;
-	letter-spacing: 0em;
+	color: $blue200;
 }
 
 h3 {
@@ -151,6 +152,14 @@ h3.chapter {
 		left: 0.5em;
 		margin-right: -50%;
 	}
+}
+
+.block-lead_text {
+	p {
+		font-size: 20px;
+		line-height: 1.5;
+	}
+	margin-bottom: 3rem; 
 }
 .btn-primary {
 	border-radius: 4px;
@@ -391,6 +400,11 @@ footer {
 	}
 }
 
+.header-gradient {
+	background-image: linear-gradient(to bottom, $blue100, $blue200);
+	height: 400px;
+}
+
 #hero-slider {
 	.carousel-item {
 		height: 100vh;
@@ -432,6 +446,25 @@ footer {
 section.project-diary-section,
 section.newsletter {
 	background-color: $grey500;
+}
+
+section.content {
+	padding-top: 0;
+	.container {
+		background-color: $white;
+		margin-top: -100px;
+	}
+}
+
+.content-page {
+	background-color: $grey500;
+	.container {
+		margin-top: -100px;
+		background-color: $white;
+		padding: 50px 30px;
+		box-shadow: 0 4px 0 0 $grey400;
+		border-radius: 3px;
+	}
 }
 
 .project-diary {

@@ -80,29 +80,28 @@
 
 html, body {
   font-size: 16px;
-  font-family: 'Assistant', sans-serif; }
+  font-family: 'Assistant', sans-serif;
+  color: #032738; }
 
 h1 {
-  margin-bottom: 54.4px;
-  margin-bottom: 3.4rem;
+  margin-bottom: 22.4px;
+  margin-bottom: 1.4rem;
   font-family: 'Martel', serif;
-  font-size: 7.425860000000002em;
-  line-height: 163.2px;
-  line-height: 10.2rem;
+  font-size: 57px;
+  line-height: 1.05;
   font-weight: 900;
   font-style: normal;
-  letter-spacing: 0em; }
+  color: #0c4d6c; }
 
 h2 {
-  margin-bottom: 54.4px;
-  margin-bottom: 3.4rem;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
   font-family: 'Martel', serif;
-  font-size: 5.712200000000001em;
-  line-height: 108.8px;
-  line-height: 6.8rem;
+  font-size: 44px;
+  line-height: 1.37;
   font-weight: 900;
   font-style: normal;
-  letter-spacing: 0em; }
+  color: #0c4d6c; }
 
 h3 {
   margin-bottom: 54.4px;
@@ -198,6 +197,13 @@ h3.chapter {
   h3.chapter:after {
     left: 0.5em;
     margin-right: -50%; }
+
+.block-lead_text {
+  margin-bottom: 48px;
+  margin-bottom: 3rem; }
+  .block-lead_text p {
+    font-size: 20px;
+    line-height: 1.5; }
 
 .btn-primary {
   border-radius: 4px;
@@ -392,6 +398,11 @@ footer .navbar-footer {
     footer .navbar-footer .nav-item .nav-link {
       color: #f7f7f7; }
 
+.header-gradient {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#032738), to(#0c4d6c));
+  background-image: linear-gradient(to bottom, #032738, #0c4d6c);
+  height: 400px; }
+
 #hero-slider .carousel-item {
   height: 100vh;
   max-height: 75vh;
@@ -427,6 +438,22 @@ footer .navbar-footer {
 section.project-diary-section,
 section.newsletter {
   background-color: #f7f7f7; }
+
+section.content {
+  padding-top: 0; }
+  section.content .container {
+    background-color: #ffffff;
+    margin-top: -100px; }
+
+.content-page {
+  background-color: #f7f7f7; }
+  .content-page .container {
+    margin-top: -100px;
+    background-color: #ffffff;
+    padding: 50px 30px;
+    -webkit-box-shadow: 0 4px 0 0 #e6e9eb;
+            box-shadow: 0 4px 0 0 #e6e9eb;
+    border-radius: 3px; }
 
 .project-diary {
   padding-top: 200px; }

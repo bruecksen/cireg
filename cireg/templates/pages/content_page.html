@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags static i18n %}
+
+
+{% block content %}
+    <div class="content-page">
+        {% include "sections/page-content.html" %}
+        {% include "sections/case_studies.html" %}
+        {% include "sections/newsletter.html" %}
+    </div>
+{% endblock %}
