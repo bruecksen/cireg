@@ -1,0 +1,28 @@
+[[source]]
+verify_ssl = true
+name = "pypi"
+url = "https://pypi.org/simple"
+
+[packages]
+Django = "<2.1"
+wagtail = "<2.3"
+
+django-environ = "*"
+wagtailfontawesome = "*"
+wagtailtrans = "*"
+gunicorn = "*"
+psycopg2 = "*"
+raven = "*"
+argon2_cffi = "*"
+
+
+[dev-packages]
+werkzeug = "*"
+ipdb = "*"
+fabric3 = "*"
+django-debug-toolbar = "*"
+django-extensions = "*"
+pytest-django = "*"
+
+[requires]
+python_version = "3.5"
