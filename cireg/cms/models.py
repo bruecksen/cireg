@@ -1,7 +1,9 @@
 from django.db import models
 from django.db.models import Case, When, Value, IntegerField
+from django.utils.translation import gettext as _
+from django import forms
 
-from modelcluster.fields import ParentalKey
+from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from modelcluster.tags import ClusterTaggableManager
 from wagtailtrans.models import TranslatablePage
 from taggit.models import TaggedItemBase, Tag as TaggitTag
@@ -12,6 +14,7 @@ from wagtail.snippets.models import register_snippet
 from wagtail.core.fields import StreamField, RichTextField
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, MultiFieldPanel, InlinePanel, FieldRowPanel, PageChooserPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.documents.edit_handlers import DocumentChooserPanel
 
 from cireg.cms.blocks import PAGE_BLOCKS, CASE_STUDY_BLOCKS
 
@@ -68,6 +71,17 @@ class HomePageImageItem(models.Model):
 
 class ProjectDiaryOverview(TranslatablePage, Page):
     parent_page_types = ['cms.HomePage']
+    template = 'pages/project_diary_overview.html'
+
+    def get_context(self, request):
+        context = super().get_context(request)
+        entries = ProjectDiaryEntry.objects.child_of(self).live()
+        # Filter by tag
+        tag = request.GET.get('tag')
+        if tag:
+            entries = entries.filter(tags__name=tag)
+        context['project_diary_entries'] = entries
+        return context
 
 
 class ProjectDiaryTag(TaggedItemBase):
@@ -90,20 +104,32 @@ class ProjectDiaryEntry(TranslatablePage, Page):
         ], heading="Teaser"),
         FieldPanel('tags'),
         FieldPanel('pinned_post'),
-        StreamFieldPanel('content', classname="full"),
+        StreamFieldPanel('content'),
     ]
+    template = 'pages/project_diary_page.html'
 
 
 class CaseStudy(TranslatablePage, Page):
     parent_page_types = ['cms.ContentPage']
 
     teaser_image = models.ForeignKey('wagtailimages.Image', on_delete=models.PROTECT, help_text="This image is used for the teaser boxes at the homepage.")
+    location = models.CharField(max_length=500)
+    highlight_key = models.CharField(max_length=500, null=True, blank=True)
+    highlight_value = models.CharField(max_length=500, null=True, blank=True)
     content = StreamField(CASE_STUDY_BLOCKS, null=True, blank=True)
 
     content_panels = Page.content_panels + [
         ImageChooserPanel('teaser_image'),
-        StreamFieldPanel('content', classname="full"),
+        MultiFieldPanel([
+            FieldPanel('location'),
+            FieldRowPanel([
+                FieldPanel('highlight_key'),
+                FieldPanel('highlight_value'),
+            ]),
+        ], heading="Highlight"),
+        StreamFieldPanel('content'),
     ]
+    template = 'pages/case_study_page.html'
 
 
 class ContentPage(TranslatablePage, Page):
@@ -112,7 +138,71 @@ class ContentPage(TranslatablePage, Page):
     content = StreamField(PAGE_BLOCKS, null=True, blank=True)
 
     content_panels = Page.content_panels + [
-        StreamFieldPanel('content', classname="full"),
+        StreamFieldPanel('content'),
     ]
 
     template = 'pages/content_page.html'
+
+
+TIME_CHOICES = [
+    ('historical', _('Historical')),
+    ('future', _('Future')),
+]
+
+
+class DownloadOverviewPage(TranslatablePage, Page):
+    parent_page_types = ['cms.HomePage', 'cms.ContentPage']
+
+    show_filter = models.BooleanField(default=True)
+    intro_text = RichTextField(null=True, blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('show_filter'),
+        FieldPanel('intro_text'),
+    ]
+    template = 'pages/download_overview_page.html'
+
+    def get_context(self, request):
+        context = super().get_context(request)
+        context['energy_type_filter'] = EnergyType.objects.all()
+        context['download_items'] = DownloadItem.objects.child_of(self).live()
+        return context
+
+
+class EnergyType(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+
+class DownloadItem(Page):
+    parent_page_types = ['cms.DownloadOverviewPage']
+
+    description = RichTextField()
+    image = models.ForeignKey('wagtailimages.Image', on_delete=models.PROTECT, null=True, blank=True)
+    file = models.ForeignKey(
+        'wagtaildocs.Document',
+        null=True,
+        blank=True,
+        on_delete=models.PROTECT,
+        related_name='+'
+    )
+    file_text = models.CharField(max_length=500, null=True, blank=True)
+    energy_type = ParentalManyToManyField(EnergyType, blank=True)
+    timestamp = models.CharField(max_length=20, choices=TIME_CHOICES, null=True, blank=True)
+
+
+    content_panels = Page.content_panels + [
+        FieldPanel('description'),
+        ImageChooserPanel('image'),
+        MultiFieldPanel([
+            DocumentChooserPanel('file'),
+            FieldPanel('file_text'),
+        ], heading="File"),
+        MultiFieldPanel([
+            FieldPanel('energy_type', widget=forms.CheckboxSelectMultiple),
+            FieldPanel('timestamp', widget=forms.RadioSelect),
+        ], heading="Filter")
+    ]
+    template = 'pages/download_overview_page.html'

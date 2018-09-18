@@ -39,6 +39,64 @@ function switch_menu(body) {
 }
 $(document).ready(function() {
     switch_menu(this);
+    // init Isotope
+    var $grid = $('.download-item-list').isotope({
+      // options
+    });
+
+    // store filter for each group
+    var filters = {};
+
+    $('.filter li a').on( 'click', function( event ) {
+        var $button = $( event.currentTarget );
+        $button.toggleClass('is-checked');
+        var isChecked = $button.hasClass('is-checked');
+        // get group key
+        var $buttonGroup = $button.parents('.button-group');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        if ( isChecked ) {
+            addFilter( filterGroup, $button.attr('data-filter') );
+          } else {
+            removeFilter( filterGroup, $button.attr('data-filter') );
+        }
+        console.log(filters);
+        // combine filters
+        var filterValue = concatValues( filters );
+        // set filter for Isotope
+        console.log(filterValue);
+        $grid.isotope({ filter: filterValue });
+    });
+
+    // flatten object by concatting values
+    function concatValues( obj ) {
+        var value = '';
+        for ( var prop in obj ) {
+            value += obj[ prop ];
+        }
+        return value;
+    }
+
+    function addFilter( group, filter ) {
+        var group_filters = filters[group];
+        if (group_filters===undefined) {
+            group_filters = [];
+        }
+        if ( group_filters.indexOf( filter ) == -1 ) {
+            group_filters.push( filter );
+        }
+        filters[group] = group_filters;
+    }
+
+    function removeFilter( group, filter ) {
+        var group_filters = filters[group];
+        var index = group_filters.indexOf( filter);
+        if ( index != -1 ) {
+            group_filters.splice( index, 1 );
+        }
+        filters[group] = group_filters;
+    }
+
 })
 $(window).scroll(function(){
     switch_menu(this);

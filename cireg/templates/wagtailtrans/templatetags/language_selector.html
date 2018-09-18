@@ -1,0 +1,8 @@
+<li class="active active-language nav-item">
+        <a class="nav-link" href="{{ current_page.url }}">{{ current_page.language.code }}</a>
+</li>
+{% for language, page in translations.items %}
+<li class="nav-item">
+    <a class="nav-link" href="{{ page.url }}">{{ language.code }}</a>
+</li>
+{% endfor %}

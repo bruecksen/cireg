@@ -38,17 +38,56 @@ class LeadText(RichTextBlock):
         template = 'blocks/lead_text.html'
 
 
-PAGE_BLOCKS = [
+class ImageBlock(StructBlock):
+    image = ImageChooserBlock()
+    description = CharBlock(required=False)
+
+    class Meta:
+        template = 'blocks/image_block.html'
+        label = 'Image'
+        icon = 'fa-image'
+
+
+COLUMNS_BLOCKS = [
+    ('text', RichTextBlock()),
+    ('image_block', ImageBlock()),
+]
+
+
+class ColumnsBlock(StructBlock):
+    left_column = StreamBlock(COLUMNS_BLOCKS, label="Left")
+    right_column = StreamBlock(COLUMNS_BLOCKS, label="Right")
+
+    def get_context(self, value, parent_context=None):
+        context = super(ColumnsBlock, self).get_context(value, parent_context=parent_context)
+        context['left_column'] = value.get('left_column')
+        context['right_column'] = value.get('right_column')
+        return context
+
+    class Meta:
+        icon = 'table'
+        label = 'Columns 1-1'
+        template = None
+
+
+class Columns1To1Block(ColumnsBlock):
+    class Meta:
+        label = 'Two columns'
+        template = 'blocks/columns-1-1.html'
+
+
+BASE_BLOCKS = [
     ('icon_heading_block', IconHeadingBlock()),
     ('heading_block', HeadingBlock()),
     ('text', RichTextBlock()),
     ('lead_text', LeadText()),
+    ('image_block', ImageBlock()),
+    ('columns_1_1', Columns1To1Block()),
 ]
 
-CASE_STUDY_BLOCKS = [
-    ('icon_heading_block', IconHeadingBlock()),
-    ('heading_block', HeadingBlock()),
-    ('text', RichTextBlock()),
-    ('intro_text', RichTextBlock()),
+PAGE_BLOCKS = BASE_BLOCKS + [
+]
+
+CASE_STUDY_BLOCKS = BASE_BLOCKS + [
     ('text_and_fact_block', TextAndFactsBlock()),
 ]

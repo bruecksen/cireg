@@ -1,10 +1,26 @@
+{% load wagtailcore_tags i18n %}
 <div class="header-gradient">
 </div>
 <section class="page-content">
     <div class="container">
+        {% if page.highlight_key %}
+        <div class="highlight">
+            <p><b>{{ page.highlight_key }}</b> {{page.highlight_value}}</p>
+        </div>
+        {% endif %}
         <h1>{{ page.title }}</h1>
         {% for block in page.content %}
             {{ block }}
         {% endfor %}
+        {% if page.tags %}
+        <div class="tags">
+            <span>Tags: </span>
+            <ul class="list-unstyled list-inline">
+            {% for tag in page.tags.all %}
+                <li class="list-inline-item"><a href="{% pageurl page.get_parent %}?tag={{ tag }}" class="badge badge-primary">{{ tag }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
     </div>
 </section>

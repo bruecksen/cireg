@@ -1,0 +1,33 @@
+{% load wagtailcore_tags wagtailimages_tags i18n static %}
+<div class="header-gradient">
+</div>
+<section class="download-page-content">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        {% if page.intro_text %}
+        <div class="block-lead_text">
+            {{ page.intro_text|richtext }}
+        </div>
+        <hr>
+        {% endif %}
+        {% if page.show_filter %}
+        <div class="filter">
+            <span>Filter by: </span>
+            <ul class="list-unstyled list-inline button-group"data-filter-group="type">
+            {% for energy_type in energy_type_filter %}
+                <li class="list-inline-item"><a href="javascript:void(0)" class="badge badge-secondary" data-filter=".{{ energy_type.name|slugify }}">{{ energy_type.name }}</a></li>
+            {% endfor %}
+            </ul>
+            <ul class="list-unstyled list-inline button-group" data-filter-group="time">
+                <li class="list-inline-item historical"><a href="javascript:void(0)"  data-filter=".historical" class="badge badge-secondary">{% trans "Historical" %}</a></li>
+                <li class="list-inline-item"><a href="javascript:void(0)" data-filter=".future" class="badge badge-secondary">{% trans "Future" %}</a></li>
+            </ul>
+        </div>
+        {% endif %}
+        <div class="download-item-list">
+        {% for item in download_items %}
+            {% include "widgets/download_item.html" %}
+        {% endfor %}
+        </div>
+    </div>
+</section>

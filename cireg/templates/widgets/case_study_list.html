@@ -1,0 +1,3 @@
+{% for case_study in case_studies %}
+    {% include "widgets/case_study_teaser.html" with count=case_studies|length %}
+{% endfor %}

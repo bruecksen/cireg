@@ -1,9 +1,10 @@
-{% load static %}
+{% load static wagtailtrans_tags %}
 <header class="{{ header_size }}">
     <nav class="navbar navbar-expand-sm fixed-top navbar-meta">
         <div class="container">
             <div class="collapse navbar-collapse justify-content-end" id="meta-nav">
                 <ul class="navbar-nav">
+                    {% render_language_selector page %}
                     {% for menu_item in meta_menu %}
                       <li class="nav-item{% if menu_item.active %} active{% endif %}">
                         <a class="nav-link" href="{{ menu_item.url }}">{{ menu_item.text }}</a>

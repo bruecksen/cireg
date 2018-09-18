@@ -1,9 +1,9 @@
 {% load wagtailimages_tags wagtailcore_tags %}
-<div id="hero-slider" class="carousel slide" data-ride="carousel">
+<div id="hero-slider" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       {% for item in page.image_items.all %}
           {% image item.image original as image %}
-          <div class="carousel-item active" style="background-image: url('{{ image.url }}');">
+          <div class="carousel-item{% if forloop.first%} active{% endif %}" style="background-image: url('{{ image.url }}');">
           </div>
       {% endfor %}
     </div>

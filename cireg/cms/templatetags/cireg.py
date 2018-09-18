@@ -1,7 +1,10 @@
+import os
+
 from django import template
 from django.template.loader import render_to_string
 
 from cireg.contrib.models import Menu
+from cireg.cms.models import CaseStudy, ProjectDiaryOverview
 
 # from impacts_world.core.models import HeaderSettings
 register = template.Library()
@@ -18,14 +21,19 @@ def menu_as_context(menu, current_page):
         else:
             active = False
         children = []
+        child_active = False
         for child in menu_item.submenu:
             if child.block_type == 'jump_link':
                 children.append({'url': '%s%s' % (target.url, child.value.get('link')), 'text': child.value.get('name'), 'is_anchor': True})
             elif child.block_type == 'page_link':
                 child_page = child.value.get('page')
                 children.append({'url': child_page.url, 'text': child.value.get('name'), 'active': child_page.specific == current_page})
+                if child_page.specific == current_page:
+                    child_active = True
             elif child.block_type == 'external_link':
                 children.append({'url': child.value.get('url'), 'text': child.value.get('name'), 'is_external': True})
+        if child_active:
+            active = True
         if target.url:
             target_url = target.url
             if target_appendix:
@@ -68,3 +76,21 @@ def footer(context, *args, **kwargs):
     context.update(kwargs)
     template = 'widgets/footer.html'
     return render_to_string(template, context=context.flatten())
+
+
+@register.inclusion_tag('widgets/case_study_list.html')
+def case_study_list():
+    case_studies = CaseStudy.objects.live()
+    return {'case_studies': case_studies}
+
+
+@register.simple_tag(takes_context=True)
+def project_diary_overview_page_url(context, *args, **kwargs):
+    language = context['page'].specific.language
+    return ProjectDiaryOverview.objects.get(language=language).url
+
+
+@register.filter
+def filesize(value):
+    """Returns the filesize of the filename given in value"""
+    return os.path.getsize(value)

@@ -1,0 +1,5 @@
+{% load wagtailimages_tags %}
+<figure class="figure">
+    {% image value.image width-1500 class="figure-img mx-auto d-block img-fluid" %}
+  <figcaption class="figure-caption">{{ value.description }}</figcaption>
+</figure>

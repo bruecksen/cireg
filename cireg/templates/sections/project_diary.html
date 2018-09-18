@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n cireg %}
 <section class="project-diary-section">
     <div class="container project-diary">
         <h3 class="chapter">{% trans "Latest project diary" %}</h3>
@@ -8,7 +8,7 @@
         {% endfor %}
         </div>
         <div class="d-flex justify-content-center">
-        <a href="#" class="btn btn-secondary show-all ">{% trans "Show All Project Diaries" %}</a>
+        <a href="{% project_diary_overview_page_url %}" class="btn btn-secondary show-all ">{% trans "Show All Project Diaries" %}</a>
         </div>
     </div>
 </section>
