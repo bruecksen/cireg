@@ -27,7 +27,10 @@ def menu_as_context(menu, current_page):
                 children.append({'url': '%s%s' % (target.url, child.value.get('link')), 'text': child.value.get('name'), 'is_anchor': True})
             elif child.block_type == 'page_link':
                 child_page = child.value.get('page')
-                children.append({'url': child_page.url, 'text': child.value.get('name'), 'active': child_page.specific == current_page})
+                child_name = child.value.get('name')
+                if not child_name:
+                    child_name = child_page.title
+                children.append({'url': child_page.url, 'text': child_name, 'active': child_page.specific == current_page})
                 if child_page.specific == current_page:
                     child_active = True
             elif child.block_type == 'external_link':
