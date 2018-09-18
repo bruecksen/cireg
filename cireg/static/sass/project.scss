@@ -23,6 +23,13 @@ $grey400: #e6e9eb;
 $grey500: #f7f7f7;
 
 
+@keyframes move-right {
+	100% {
+		transform: translate(1em, -9em);
+	}
+}
+
+
 
 html, body {
 	font-size: 20px;
@@ -312,11 +319,9 @@ header {
 			position: relative;
 		}
 		.navbar-brand {
-			img.large {
-				display: inline-block;
-			}
+			img.large,
 			img.medium {
-				display: none;
+				display: inline-block;
 			}
 		}
 		hr {
@@ -360,6 +365,9 @@ header {
 				color: $grey100;
 				text-transform: uppercase;
 				font-weight: normal;
+				&:hover {
+					color: $blue300;
+				}
 			}
 			&.active .nav-link {
 				color: $blue300;
@@ -380,6 +388,22 @@ header {
 	&.large {
 		.navbar-main {
 			transition: unset;
+			.navbar-brand {
+				img {
+					opacity: 0;
+					position: absolute;
+				}
+				img.medium {
+					opacity: 0;
+					position: absolute;
+					transition: none;
+				}
+				img.large {
+					position: static;
+					opacity: 1;
+					transition: opacity .5s ease-in-out;
+				}
+			}
 		}
 	}
 	&.medium {
@@ -401,11 +425,19 @@ header {
 				top: 22px;
 			}
 			.navbar-brand {
+				img {
+					opacity: 0;
+					position: absolute;
+				}
 				img.medium {
-					display: inline-block;
+					opacity: 1;
+					position: static;
+					transition: opacity .5s ease-in-out;
 				}
 				img.large {
-					display: none;
+					position: absolute;
+					opacity: 0;
+					transition: none;
 				}
 			}
 		}
@@ -444,29 +476,48 @@ header {
 			font-size: 16px;
 			color: $blue100;
 			font-weight: normal;
-			padding: .255rem 1rem .255rem 1rem;
+			padding: .255rem 1rem .255rem .455rem;
+			transition: padding-left .2s ease-in-out;
 			&:first-child {
 				border-top: 1px solid $grey300;
 			}
 			&:not(:first-child) {
 				border-top: 1px solid $grey400;
 			}
+			&:active {
+				color: $blue100;
+				text-decoration: none;
+				background-color: $grey500;
+			}
+			&:before {
+				transition: opacity .2s ease-in-out;
+				display: inline-block;
+				opacity: 0;
+				width: 0;
+				height: 0;
+				content: "";
+				margin-right: .255em;
+				vertical-align: .155em;
+				border-top: .25em solid;
+				border-right: .25em solid transparent;
+				border-left: .25em solid transparent;
+				border-bottom: 0;
+				transform: rotate(270deg);
+			}
+			&:hover {
+				background-color: $grey400;
+				padding-left: 1rem;
+				&:before {
+					opacity: 1;
+				}
+			}
 			&.active {
 				background-color: $grey400;
 				font-weight: 600;
 				color: $blue300;
+				padding-left: 1rem;
 				&:before {
-					display: inline-block;
-					width: 0;
-					height: 0;
-					content: "";
-					margin-right: .255em;
-					vertical-align: .155em;
-					border-top: .25em solid;
-					border-right: .25em solid transparent;
-					border-left: .25em solid transparent;
-					border-bottom: 0;
-					transform: rotate(270deg);
+					opacity: 1;
 				}
 			}
 		}
