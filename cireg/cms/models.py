@@ -70,7 +70,7 @@ class HomePageImageItem(models.Model):
 
 
 class ProjectDiaryOverview(TranslatablePage, Page):
-    parent_page_types = ['cms.HomePage']
+    parent_page_types = ['cms.HomePage', 'cms.ContentPage']
     template = 'pages/project_diary_overview.html'
 
     def get_context(self, request):
