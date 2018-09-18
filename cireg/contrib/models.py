@@ -55,6 +55,7 @@ class PageLinkBlock(BaseLinkBlock):
     """
     Block that holds a page.
     """
+    name = blocks.CharBlock(required=False, help_text="If left empty the title of the page is used")
     page = blocks.PageChooserBlock()
 
     class Meta:
