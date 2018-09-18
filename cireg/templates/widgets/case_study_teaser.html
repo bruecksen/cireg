@@ -1,10 +1,10 @@
 {% load wagtailimages_tags i18n static %}
-<div class="{% if count == 1 or count == 3%}col-12{% else %}col-6{% endif %} d-flex align-items-stretch">
+<div class="{% if count == 1 or count == 3%}col-12{% else %}col-sm-6 col-12{% endif %} d-flex align-items-stretch">
     <div class="card">
         {% image case_study.teaser_image fill-1080x720 class="card-img-top img-fluid" %}
         <div class="card-box">
             <div>
-                <img src="{% static 'images/Logo_Small_On_Dark_Variant.svg' %}" width="90" height="90">
+                <img src="{% static 'images/Logo_Small_On_Dark_Variant.svg' %}" width="90" height="90" class="d-none d-sm-block">
                 <h6>Case study 1: GUINEA</h6>
                 <a href="{{ case_study.url }}"><h5 class="card-title">{{ case_study.title }}</h5></a>
             </div>

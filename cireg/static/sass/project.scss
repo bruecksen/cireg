@@ -198,6 +198,10 @@ h3.chapter {
 		background-color: $orange200;
 		border-color: $orange200;
 	}
+	@media (max-width: 575px) { 
+		font-size: 22px;
+		padding: 6px 10px;
+	}
 }
 .btn-secondary {
 	background: transparent;
@@ -348,6 +352,11 @@ header {
 			top: 40px;
 			right: 0;
 		}
+		@media (max-width: 575px) { 
+			hr {
+				display: none;
+			}
+		}
 	}
 	.navbar-meta {
 		background-color: $grey500;
@@ -438,6 +447,29 @@ header {
 					position: absolute;
 					opacity: 0;
 					transition: none;
+				}
+			}
+		}
+	}
+	@media (max-width: 575px) { 
+		.navbar-meta {
+			display: block;
+		}
+		.navbar-main {
+			height: 90px;
+			top: 30px;
+			background-color: $blue100;
+			hr {
+				display: none;
+			}
+			.navbar-brand {
+				img.medium {
+					display: inline-block;
+					opacity: 1!important;
+					position: static!important;
+				}
+				img.large {
+					display: none;
 				}
 			}
 		}
@@ -587,7 +619,9 @@ footer {
 		padding: 50px 80px;
 		text-align: center;
 		line-height: 1.54;
-		.btn-primary {
+		@media (max-width: 575px) {
+			padding: 25px 30px;
+			font-size: 22px;
 		}
 	}
 }
@@ -719,6 +753,9 @@ section.download-page-content {
 		position: relative;
 		padding-bottom: 1.5rem;
 		border-radius: 0;
+	@media (max-width: 575px) { 
+		margin-bottom: 50px;
+	}
 		&:hover {
 			cursor: pointer;
 		}
@@ -754,6 +791,9 @@ section.download-page-content {
 		border: none;
 		position: relative;
 		cursor: pointer;
+		@media (max-width: 575px) { 
+			margin-bottom: 150px;
+		}
 	}
 	.card-box {
 		padding: 1rem 2rem;
@@ -763,6 +803,10 @@ section.download-page-content {
 		bottom: 0;
 		transform: translateX(-50%) translateY(50%);
 		width: 80%;
+		@media (max-width: 575px) { 
+			width: 90%;
+			padding: .9rem 1.5rem;
+		}
 		img {
 			position: absolute;
 			top: 50%;
@@ -775,6 +819,9 @@ section.download-page-content {
 	h5, h6 {
 		margin-left: 110px;
 		margin-bottom: 0;
+		@media (max-width: 575px) { 
+			margin-left: 0;
+		}
 	}
 	h5 {
 		font-family: 'Assistant', sans-serif;

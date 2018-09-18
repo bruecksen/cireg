@@ -1,6 +1,6 @@
 {% load static wagtailtrans_tags %}
 <header class="{{ header_size }}">
-    <nav class="navbar navbar-expand-sm fixed-top navbar-meta">
+    <nav class="navbar navbar-expand fixed-top navbar-meta">
         <div class="container">
             <div class="collapse navbar-collapse justify-content-end" id="meta-nav">
                 <ul class="navbar-nav">
@@ -14,12 +14,15 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-main">
+    <nav class="navbar navbar-expand-sm fixed-top navbar-main">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <img src="{% static 'images/Logo_Large_On_Dark.svg' %}" class="align-top large" alt="">
                 <img src="{% static 'images/Logo_Medium_On_Dark.svg' %}" class="align-top medium" alt="">
             </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="{% static "images/bars-solid.svg" %}" width="30" height="30">
+              </button>
             <hr>
             <div class="collapse navbar-collapse" id="main-nav">
                 <ul class="navbar-nav">

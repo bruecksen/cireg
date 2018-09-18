@@ -218,6 +218,10 @@ h3.chapter {
     color: #032738;
     background-color: #eea00a;
     border-color: #eea00a; }
+  @media (max-width: 575px) {
+    .btn-primary {
+      font-size: 22px;
+      padding: 6px 10px; } }
 
 .btn-secondary {
   background: transparent;
@@ -338,6 +342,9 @@ header .navbar-main {
     position: absolute;
     top: 40px;
     right: 0; }
+  @media (max-width: 575px) {
+    header .navbar-main hr {
+      display: none; } }
 
 header .navbar-meta {
   background-color: #f7f7f7;
@@ -413,6 +420,22 @@ header.medium .navbar-main {
     opacity: 0;
     -webkit-transition: none;
     transition: none; }
+
+@media (max-width: 575px) {
+  header .navbar-meta {
+    display: block; }
+  header .navbar-main {
+    height: 90px;
+    top: 30px;
+    background-color: #032738; }
+    header .navbar-main hr {
+      display: none; }
+    header .navbar-main .navbar-brand img.medium {
+      display: inline-block;
+      opacity: 1 !important;
+      position: static !important; }
+    header .navbar-main .navbar-brand img.large {
+      display: none; } }
 
 .nav-item.dropdown .dropdown-toggle:after {
   margin-left: .555em;
@@ -539,6 +562,10 @@ footer .navbar-footer {
   padding: 50px 80px;
   text-align: center;
   line-height: 1.54; }
+  @media (max-width: 575px) {
+    #hero-slider .intro {
+      padding: 25px 30px;
+      font-size: 22px; } }
 
 section.project-diary-section,
 section.newsletter {
@@ -654,6 +681,9 @@ section.download-page-content .download-item {
     padding-bottom: 24px;
     padding-bottom: 1.5rem;
     border-radius: 0; }
+    @media (max-width: 575px) {
+      .project-diary .card {
+        margin-bottom: 50px; } }
     .project-diary .card:hover {
       cursor: pointer; }
     .project-diary .card .card-date {
@@ -685,6 +715,9 @@ section.download-page-content .download-item {
     border: none;
     position: relative;
     cursor: pointer; }
+    @media (max-width: 575px) {
+      .case-studies .card {
+        margin-bottom: 150px; } }
   .case-studies .card-box {
     padding: 16px 32px;
     padding: 1rem 2rem;
@@ -695,6 +728,10 @@ section.download-page-content .download-item {
     -webkit-transform: translateX(-50%) translateY(50%);
             transform: translateX(-50%) translateY(50%);
     width: 80%; }
+    @media (max-width: 575px) {
+      .case-studies .card-box {
+        width: 90%;
+        padding: .9rem 1.5rem; } }
     .case-studies .card-box img {
       position: absolute;
       top: 50%;
@@ -705,6 +742,9 @@ section.download-page-content .download-item {
   .case-studies h5, .case-studies h6 {
     margin-left: 110px;
     margin-bottom: 0; }
+    @media (max-width: 575px) {
+      .case-studies h5, .case-studies h6 {
+        margin-left: 0; } }
   .case-studies h5 {
     font-family: 'Assistant', sans-serif;
     font-size: 34px;
