@@ -24,7 +24,7 @@ def production():
     env.push_branch = 'master'
     env.push_remote = 'origin'
     env.after_deploy_url = 'http://cireg.pik-potsdam.de'
-    env.reload_cmd = 'sudo /bin/systemctl restart gunicorn-{0}.pik-potsdam.de.service'.format(projectname)
+    env.reload_cmd = 'sudo /bin/systemctl restart gunicorn-cireg.pik-potsdam.de.service'
 
 
 def reload_webserver():

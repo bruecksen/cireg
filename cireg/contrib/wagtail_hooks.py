@@ -1,6 +1,9 @@
+from django.urls import reverse
+
 from wagtail.contrib.modeladmin.options import (
     ModelAdmin, modeladmin_register)
 from wagtail.core import hooks
+from wagtail.admin.menu import MenuItem
 
 from .models import Menu
 
@@ -20,3 +23,8 @@ modeladmin_register(MenuModelAdmin)
 @hooks.register('construct_main_menu')
 def hide_snippets_menu_item(request, menu_items):
     menu_items[:] = [item for item in menu_items if item.name != 'snippets']
+
+
+# @hooks.register('register_admin_menu_item')
+# def register_publications_menu_item():
+#     return MenuItem('Publications', reverse('admin:publications_bootstrap'), classnames='icon icon-folder-inverse', order=10000)

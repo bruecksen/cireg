@@ -19,7 +19,8 @@ Issues with the above approach:
 4. Undocumented: No mention in the documentation, or it's too hard for me to find
 */
 $('.form-group').removeClass('row');
-
+$('.rich-text a[href^="http://"]').attr('target', '_blank');
+$('.rich-text a[href^="https://"]').attr('target', '_blank');
 $(".project-diary .card").click(function() {
   window.location = $(this).find("a").attr("href"); 
   return false;

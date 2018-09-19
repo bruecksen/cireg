@@ -112,16 +112,16 @@ class ProjectDiaryEntry(TranslatablePage, Page):
 class CaseStudy(TranslatablePage, Page):
     parent_page_types = ['cms.ContentPage']
 
+    subtitle = models.CharField(max_length=500)
     teaser_image = models.ForeignKey('wagtailimages.Image', on_delete=models.PROTECT, help_text="This image is used for the teaser boxes at the homepage.")
-    location = models.CharField(max_length=500)
     highlight_key = models.CharField(max_length=500, null=True, blank=True)
     highlight_value = models.CharField(max_length=500, null=True, blank=True)
     content = StreamField(CASE_STUDY_BLOCKS, null=True, blank=True)
 
     content_panels = Page.content_panels + [
+        FieldPanel('subtitle'),
         ImageChooserPanel('teaser_image'),
         MultiFieldPanel([
-            FieldPanel('location'),
             FieldRowPanel([
                 FieldPanel('highlight_key'),
                 FieldPanel('highlight_value'),

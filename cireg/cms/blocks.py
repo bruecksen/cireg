@@ -76,6 +76,12 @@ class Columns1To1Block(ColumnsBlock):
         template = 'blocks/columns-1-1.html'
 
 
+class Columns1To3Block(ColumnsBlock):
+    class Meta:
+        label = 'Columns [1|3]'
+        template = 'blocks/columns-1-3.html'
+
+
 BASE_BLOCKS = [
     ('icon_heading_block', IconHeadingBlock()),
     ('heading_block', HeadingBlock()),
@@ -83,6 +89,7 @@ BASE_BLOCKS = [
     ('lead_text', LeadText()),
     ('image_block', ImageBlock()),
     ('columns_1_1', Columns1To1Block()),
+    ('columns_1_3', Columns1To3Block()),
 ]
 
 PAGE_BLOCKS = BASE_BLOCKS + [
