@@ -47,6 +47,8 @@ def menu_as_context(menu, current_page):
 
 @register.simple_tag(takes_context=True)
 def header(context, *args, **kwargs):
+    if 'page' not in context:
+        return
     language = context['page'].specific.language
     main_menu = Menu.objects.get(language=language, menu_type=Menu.MAIN_MENU)
     meta_menu = Menu.objects.get(language=language, menu_type=Menu.META_MENU)
@@ -66,6 +68,8 @@ def header(context, *args, **kwargs):
 
 @register.simple_tag(takes_context=True)
 def footer(context, *args, **kwargs):
+    if 'page' not in context:
+        return
     language = context['page'].specific.language
     footer_menu = Menu.objects.get(language=language, menu_type=Menu.FOOTER_MENU)
 

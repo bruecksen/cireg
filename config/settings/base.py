@@ -78,6 +78,7 @@ THIRD_PARTY_APPS = [
     'taggit',
     'wagtailfontawesome',
     'wagtailtrans',
+    'publications_bootstrap',
 ]
 LOCAL_APPS = [
     'cireg.core.apps.CoreConfig',

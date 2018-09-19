@@ -6,7 +6,6 @@ url = "https://pypi.org/simple"
 [packages]
 Django = "<2.1"
 wagtail = "<2.3"
-
 django-environ = "*"
 wagtailfontawesome = "*"
 wagtailtrans = "*"
@@ -14,7 +13,7 @@ gunicorn = "*"
 psycopg2 = "*"
 raven = "*"
 argon2_cffi = "*"
-
+django-publications-bootstrap = "*"
 
 [dev-packages]
 werkzeug = "*"
