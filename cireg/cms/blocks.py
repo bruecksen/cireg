@@ -72,7 +72,7 @@ class ColumnsBlock(StructBlock):
 
 class Columns1To1Block(ColumnsBlock):
     class Meta:
-        label = 'Two columns'
+        label = 'Columns [1|1]'
         template = 'blocks/columns-1-1.html'
 
 
@@ -80,6 +80,18 @@ class Columns1To3Block(ColumnsBlock):
     class Meta:
         label = 'Columns [1|3]'
         template = 'blocks/columns-1-3.html'
+
+
+class FourColumnsBlock(StructBlock):
+    first = StreamBlock(COLUMNS_BLOCKS, label="First")
+    second = StreamBlock(COLUMNS_BLOCKS, label="Second")
+    third = StreamBlock(COLUMNS_BLOCKS, label="Third")
+    fourth = StreamBlock(COLUMNS_BLOCKS, label="Fourth")
+
+    class Meta:
+        icon = 'table'
+        label = 'Columns [1|1|1|1]'
+        template = 'blocks/columns-4.html'
 
 
 BASE_BLOCKS = [
@@ -90,6 +102,7 @@ BASE_BLOCKS = [
     ('image_block', ImageBlock()),
     ('columns_1_1', Columns1To1Block()),
     ('columns_1_3', Columns1To3Block()),
+    ('columns_4', FourColumnsBlock()),
 ]
 
 PAGE_BLOCKS = BASE_BLOCKS + [
