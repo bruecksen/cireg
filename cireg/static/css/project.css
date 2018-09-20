@@ -124,48 +124,56 @@ h2 {
       top: 5px; }
 
 h3 {
-  margin-bottom: 54.4px;
-  margin-bottom: 3.4rem;
+  margin-top: 32px;
+  margin-top: 2rem;
+  margin-bottom: 4px;
+  margin-bottom: .25rem;
   font-family: 'Martel', serif;
-  font-size: 4.394000000000001em;
-  line-height: 108.8px;
-  line-height: 6.8rem;
+  font-size: 33.8px;
+  line-height: 1.78;
   font-weight: 900;
   font-style: normal;
-  letter-spacing: 0em; }
+  letter-spacing: 0em;
+  color: #0c4d6c; }
 
 h4 {
-  margin-bottom: 54.4px;
-  margin-bottom: 3.4rem;
+  margin-top: 32px;
+  margin-top: 2rem;
+  margin-bottom: 4px;
+  margin-bottom: .25rem;
   font-family: 'Martel', serif;
-  font-size: 3.3800000000000003em;
-  line-height: 54.4px;
-  line-height: 3.4rem;
+  font-size: 26px;
+  line-height: 1.15;
   font-weight: 900;
   font-style: normal;
-  letter-spacing: 0em; }
+  letter-spacing: 0em;
+  color: #0c4d6c; }
 
 h5 {
-  margin-bottom: 54.4px;
-  margin-bottom: 3.4rem;
+  margin-top: 32px;
+  margin-top: 2rem;
+  margin-bottom: 4px;
+  margin-bottom: .25rem;
   font-family: 'Martel', serif;
   font-size: 2.6em;
   line-height: 54.4px;
   line-height: 3.4rem;
   font-weight: 900;
   font-style: normal;
-  letter-spacing: 0em; }
+  letter-spacing: 0em;
+  color: #0c4d6c; }
 
 h6 {
-  margin-bottom: 54.4px;
-  margin-bottom: 3.4rem;
+  margin-bottom: 8px;
+  margin-bottom: .5rem;
   font-family: 'Martel', serif;
   font-size: 2.6em;
   line-height: 54.4px;
   line-height: 3.4rem;
   font-weight: 900;
   font-style: normal;
-  letter-spacing: 0em; }
+  letter-spacing: 0em;
+  color: #0c4d6c; }
 
 h3.chapter {
   font-size: 20px;
@@ -201,6 +209,12 @@ h3.chapter {
     font-size: 26px;
     line-height: 1.42;
     font-weight: 600; }
+
+.rich-text img.left {
+  float: left; }
+
+.rich-text img.right {
+  float: right; }
 
 .btn-primary {
   border-radius: 4px;
