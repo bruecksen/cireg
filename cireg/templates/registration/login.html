@@ -8,10 +8,11 @@
         </div>
         <section class="page-content">
             <div class="container clearfix">
-                <form method="post">
+                <h1>Login</h1>
+                <form method="post" class="login">
                   {% csrf_token %}
                   {{ form.as_p }}
-                  <button type="submit">Login</button>
+                  <button type="submit" class="btn btn-primary">Login</button>
                 </form>
             </div>
         </section>

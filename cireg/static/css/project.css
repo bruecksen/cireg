@@ -857,3 +857,7 @@ section.download-page-content .download-item {
 .pubo .form-control, .pubo label {
   font-size: 16px;
   font-size: 1rem; }
+
+.login .btn-primary {
+  font-size: 20px;
+  padding: 5px 15px; }
