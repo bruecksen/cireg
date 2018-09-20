@@ -850,3 +850,10 @@ section.download-page-content .download-item {
   .pubo .btn-primary:hover {
     border: 0;
     background-color: white; }
+
+.pubo .form-control {
+  height: calc(2.25rem + 2px); }
+
+.pubo .form-control, .pubo label {
+  font-size: 16px;
+  font-size: 1rem; }

@@ -941,4 +941,10 @@ section.download-page-content {
 			background-color: white;
 		}
 	}
+	.form-control {
+		height: calc(2.25rem + 2px);
+	}
+	.form-control, label {
+		font-size: 1rem;
+	}
 }
