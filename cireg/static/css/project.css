@@ -757,7 +757,8 @@ section.download-page-content .download-item {
     text-decoration: none; }
   .case-studies h5, .case-studies h6 {
     margin-left: 110px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-top: 0; }
     @media (max-width: 575px) {
       .case-studies h5, .case-studies h6 {
         margin-left: 0; } }
