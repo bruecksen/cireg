@@ -933,4 +933,12 @@ section.download-page-content {
 	.btn-secondary {
 		margin-left: 1rem;
 	}
+	.btn-primary {
+		padding: 5px;
+		border: 0;
+		&:hover {
+			border: 0;
+			background-color: white;
+		}
+	}
 }

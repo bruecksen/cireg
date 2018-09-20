@@ -843,3 +843,10 @@ section.download-page-content .download-item {
 .pubo .btn-secondary {
   margin-left: 16px;
   margin-left: 1rem; }
+
+.pubo .btn-primary {
+  padding: 5px;
+  border: 0; }
+  .pubo .btn-primary:hover {
+    border: 0;
+    background-color: white; }
