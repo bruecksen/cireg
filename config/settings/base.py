@@ -79,6 +79,7 @@ THIRD_PARTY_APPS = [
     'wagtailfontawesome',
     'wagtailtrans',
     'publications_bootstrap',
+    'decorator_include',
 ]
 LOCAL_APPS = [
     'cireg.core.apps.CoreConfig',
@@ -228,7 +229,7 @@ ADMINS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
-
+LOGIN_URL='/login/'
 
 # Wagtail settings
-WAGTAIL_SITE_NAME = "bakerydemo"
+WAGTAIL_SITE_NAME = "CIREG"

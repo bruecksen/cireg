@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div class="content-page">
+        <div class="header-gradient">
+        </div>
+        <section class="page-content">
+            <div class="container clearfix">
+                <form method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    {% include "sections/case_study.html" %}
+    {% include "sections/newsletter.html" %}
+{% endblock %}

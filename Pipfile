@@ -14,6 +14,7 @@ psycopg2 = "*"
 raven = "*"
 argon2_cffi = "*"
 django-publications-bootstrap = "*"
+django-decorator-include = "*"
 
 [dev-packages]
 werkzeug = "*"

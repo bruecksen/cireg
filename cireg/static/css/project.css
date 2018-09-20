@@ -836,3 +836,10 @@ section.download-page-content .download-item {
       background-color: #123a4d; }
     .facts .table.table-striped tbody tr:nth-of-type(even) {
       background-color: #0c3345; }
+
+.pubo h3 {
+  margin-top: 0; }
+
+.pubo .btn-secondary {
+  margin-left: 16px;
+  margin-left: 1rem; }

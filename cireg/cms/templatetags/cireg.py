@@ -3,6 +3,8 @@ import os
 from django import template
 from django.template.loader import render_to_string
 
+from wagtailtrans.models import Language
+
 from cireg.contrib.models import Menu
 from cireg.cms.models import CaseStudy, ProjectDiaryOverview
 
@@ -47,9 +49,11 @@ def menu_as_context(menu, current_page):
 
 @register.simple_tag(takes_context=True)
 def header(context, *args, **kwargs):
-    if 'page' not in context:
-        return
-    language = context['page'].specific.language
+    page = None
+    language = Language.objects.get(is_default=True)
+    if 'page' in context:
+        page = context['page']
+        language = page.specific.language
     main_menu = Menu.objects.get(language=language, menu_type=Menu.MAIN_MENU)
     meta_menu = Menu.objects.get(language=language, menu_type=Menu.META_MENU)
 
@@ -59,8 +63,6 @@ def header(context, *args, **kwargs):
     context['meta_menu'] = menu_as_context(meta_menu, page)
     context['language'] = language
 
-    translations = page.get_translations(include_self=True)
-    context['translations'] = translations
     context.update(kwargs)
     template = 'widgets/header.html'
     return render_to_string(template, context=context.flatten())
@@ -68,9 +70,11 @@ def header(context, *args, **kwargs):
 
 @register.simple_tag(takes_context=True)
 def footer(context, *args, **kwargs):
-    if 'page' not in context:
-        return
-    language = context['page'].specific.language
+    page = None
+    language = Language.objects.get(is_default=True)
+    if 'page' in context:
+        page = context['page']
+        language = page.specific.language
     footer_menu = Menu.objects.get(language=language, menu_type=Menu.FOOTER_MENU)
 
     page = context.get('page')
@@ -78,8 +82,6 @@ def footer(context, *args, **kwargs):
     context['footer_menu'] = menu_as_context(footer_menu, page)
     context['language'] = language
 
-    translations = page.get_translations(include_self=True)
-    context['translations'] = translations
     context.update(kwargs)
     template = 'widgets/footer.html'
     return render_to_string(template, context=context.flatten())
