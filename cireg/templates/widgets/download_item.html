@@ -1,4 +1,4 @@
-{% load wagtailcore_tags wagtailimages_tags static cireg %}
+{% load wagtailcore_tags wagtailimages_tags static cireg i18n %}
 <div class="row download-item{% for energy_type in item.energy_type.all %} {{ energy_type|slugify }}{% endfor %} {{ item.timestamp|slugify }}">
     {% if item.image %}
     <div class="col-3">
@@ -21,7 +21,7 @@
             </ul>
             <span class="download-link">
                 <img src="{% static "images/file-download-solid.svg" %}">
-                <a href="" class="download-link">Download {{ item.file.file_extension|upper }} ({{ item.file.file_size|filesizeformat }})</a>
+                <a href="{{ item.file.url }}" class="download-link">{% if item.file_text %}{{ item.file_text }}{% else %}{% trans "Download" %} {{ item.file.file_extension|upper }} ({{ item.file.file_size|filesizeformat }}){% endif %}</a>
             </span>
         </div>
     </div>

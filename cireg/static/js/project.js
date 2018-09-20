@@ -73,7 +73,7 @@ $(document).ready(function() {
     function concatValues( obj ) {
         var value = '';
         for ( var prop in obj ) {
-            value += obj[ prop ];
+            value += obj[ prop ].join('');
         }
         return value;
     }

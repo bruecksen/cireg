@@ -10,7 +10,7 @@
         {% endif %}
         {% if page.show_filter %}
         <div class="filter">
-            <span>Filter by: </span>
+            <span>{% trans "Filter by:" %} </span>
             <ul class="list-unstyled list-inline button-group"data-filter-group="type">
             {% for energy_type in energy_type_filter %}
                 <li class="list-inline-item"><a href="javascript:void(0)" class="badge badge-secondary" data-filter=".{{ energy_type.name|slugify }}">{{ energy_type.name }}</a></li>
