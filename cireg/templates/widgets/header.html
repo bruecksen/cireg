@@ -20,8 +20,9 @@
                 <img src="{% static 'images/Logo_Large_On_Dark.svg' %}" class="align-top large" alt="">
                 <img src="{% static 'images/Logo_Medium_On_Dark.svg' %}" class="align-top medium" alt="">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="{% static "images/bars-solid.svg" %}" width="30" height="30">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="{% static "images/bars-solid.svg" %}" width="30" height="30" class="hamburger">
+                <img src="{% static "images/times-solid.svg" %}" width="30" height="30" class="close">
               </button>
             <hr>
             <div class="navbar-collapse collapse" id="main-nav">

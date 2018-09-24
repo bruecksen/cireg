@@ -354,6 +354,19 @@ label {
 .content {
   padding-top: 30px; }
 
+.navbar-toggler .hamburger {
+  display: none; }
+
+.navbar-toggler .close {
+  display: block;
+  opacity: 1; }
+
+.navbar-toggler.collapsed .hamburger {
+  display: block; }
+
+.navbar-toggler.collapsed .close {
+  display: none; }
+
 .navbar-toggler:focus {
   outline: none; }
 
@@ -521,7 +534,7 @@ header.medium .navbar-main {
     border-radius: 0;
     border: 0; }
     .nav-item.dropdown .dropdown-menu .dropdown-item {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       color: #ffffff;
       padding: .5rem 2rem .5rem 1rem; }
       .nav-item.dropdown .dropdown-menu .dropdown-item.active {
