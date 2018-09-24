@@ -717,7 +717,9 @@ footer {
 		}
 		@media (max-width: 575px) {
 			padding: 25px 30px;
-			font-size: 22px;
+			p {
+				font-size: 2.2rem;
+			}
 		}
 	}
 }
