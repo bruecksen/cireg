@@ -2,7 +2,7 @@
 <div id="hero-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="10000">
     <div class="carousel-inner">
       {% for item in page.image_items.all %}
-          {% image item.image max-4000x1400 jpegquality-60 as image %}
+          {% image item.image max-4000x1400 format-jpeg jpegquality-60 as image %}
           <div class="carousel-item{% if forloop.first%} active{% endif %}" style="background-image: url('{{ image.url }}');">
           </div>
       {% endfor %}
