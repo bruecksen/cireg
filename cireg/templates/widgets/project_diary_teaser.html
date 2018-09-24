@@ -1,7 +1,7 @@
 {% load wagtailimages_tags i18n %}
 <div class="col-12 col-sm-4 d-flex align-items-stretch">
     <div class="card">
-        {% image project_diary.teaser_image width-800 class="card-img-top img-fluid" %}
+        {% image project_diary.teaser_image width-800 format-jpeg jpegquality-60 class="card-img-top img-fluid" %}
         <div class="card-body">
             <p class="card-date">{{ project_diary.first_published_at|date:"F Y" }}</p>
             <h5 class="card-title">{{ project_diary.title }}</h5>

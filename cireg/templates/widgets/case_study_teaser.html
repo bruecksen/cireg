@@ -2,9 +2,9 @@
 <div class="{% if count == 1 or count == 3%}col-12{% else %}col-sm-6 col-12{% endif %} d-flex align-items-stretch">
     <div class="card">
         {% if count == 1 or count == 3 %}
-            {% image case_study.teaser_image fill-2160x720 class="card-img-top img-fluid" %}
+            {% image case_study.teaser_image fill-2160x720 format-jpeg jpegquality-60 class="card-img-top img-fluid" %}
         {% else %}
-            {% image case_study.teaser_image fill-1080x720 class="card-img-top img-fluid" %}
+            {% image case_study.teaser_image fill-1080x720 format-jpeg jpegquality-60 class="card-img-top img-fluid" %}
         {% endif %}
         <div class="card-box">
             <div>
