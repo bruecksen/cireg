@@ -8,7 +8,11 @@
         </div>
         <section class="page-content">
             <div class="container project-diary">
+                {% if tag %}
+                <h1>All project diaries with the tag {{ tag }}</h1>
+                {% else%}
                 <h1>{{ page.title }}</h1>
+                {% endif %}
                 {% for project_diary in project_diary_entries %}
                     {% if forloop.first %}<div class="row">{% endif %}
                     {% include "widgets/project_diary_teaser.html" %}

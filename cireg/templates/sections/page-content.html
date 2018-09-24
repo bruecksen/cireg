@@ -10,7 +10,7 @@
         {% for block in page.content %}
             {{ block }}
         {% endfor %}
-        {% if page.tags %}
+        {% if page.tags.exists %}
         <div class="tags">
             <span>Tags: </span>
             <ul class="list-unstyled list-inline">

@@ -81,6 +81,7 @@ class ProjectDiaryOverview(TranslatablePage, Page):
         if tag:
             entries = entries.filter(tags__name=tag)
         context['project_diary_entries'] = entries
+        context['tag'] = tag
         return context
 
 

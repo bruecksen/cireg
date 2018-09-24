@@ -24,7 +24,7 @@
                 <img src="{% static "images/bars-solid.svg" %}" width="30" height="30">
               </button>
             <hr>
-            <div class="collapse navbar-collapse" id="main-nav">
+            <div class="navbar-collapse collapse" id="main-nav">
                 <ul class="navbar-nav">
                     {% for menu_item in main_menu %}
                       <li class="nav-item{% if menu_item.active %} active{% endif %}{% if menu_item.children %} dropdown{% endif %}">

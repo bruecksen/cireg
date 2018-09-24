@@ -1,11 +1,11 @@
 {% load wagtailcore_tags wagtailimages_tags static cireg i18n %}
 <div class="row download-item{% for energy_type in item.energy_type.all %} {{ energy_type|slugify }}{% endfor %} {{ item.timestamp|slugify }}">
     {% if item.image %}
-    <div class="col-3">
+    <div class="col-sm-3 col-12">
         {% image item.image width-500 class="mx-auto d-block img-fluid" %}
     </div>
     {% endif %}
-    <div class="{% if item.image %}col-9{% else %}col-12{% endif %}">
+    <div class="{% if item.image %}col-sm-9{% else %}col-sm-12{% endif %} col-12">
         <h2>{{ item.title }}</h2>
         {{ item.description|richtext }}
         <hr>
