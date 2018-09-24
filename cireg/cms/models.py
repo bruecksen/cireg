@@ -132,6 +132,12 @@ class CaseStudy(TranslatablePage, Page):
     ]
     template = 'pages/case_study_page.html'
 
+    def get_context(self, request):
+        context = super().get_context(request)
+        case_studies = self.get_siblings(inclusive=True).live()
+        context['case_studies'] = case_studies
+        return context
+
 
 class ContentPage(TranslatablePage, Page):
     parent_page_types = ['cms.HomePage', 'cms.ContentPage']

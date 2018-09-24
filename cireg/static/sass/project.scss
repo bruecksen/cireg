@@ -872,6 +872,12 @@ section.download-page-content {
 				}
 			}
 		}
+		hr {
+			height: 3px;
+			border-radius: 2px;
+			border-top: 0;
+			background-color: $grey500;
+		}
 	}
 
 	a {

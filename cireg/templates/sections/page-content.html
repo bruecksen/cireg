@@ -1,6 +1,19 @@
 {% load wagtailcore_tags i18n %}
 <section class="page-content">
     <div class="container clearfix">
+        {% if page.page_type == 'case_study' %}
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+        {% endif %}
         {% if page.highlight_key %}
         <div class="highlight">
             <p><b>{{ page.highlight_key }}</b> {{page.highlight_value}}</p>
@@ -12,6 +25,7 @@
         {% endfor %}
         {% if page.tags.exists %}
         <div class="tags">
+            <hr>
             <span>Tags: </span>
             <ul class="list-unstyled list-inline">
             {% for tag in page.tags.all %}

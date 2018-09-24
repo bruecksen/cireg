@@ -813,6 +813,12 @@ section.download-page-content .download-item {
         .content-page section.download-page-content .container .tags .historical,
         .content-page section.download-page-content .container .filter .historical {
           margin-left: 0; } }
+    .content-page section.page-content .container hr,
+    .content-page section.download-page-content .container hr {
+      height: 3px;
+      border-radius: 2px;
+      border-top: 0;
+      background-color: #f7f7f7; }
   .content-page a {
     color: #cf8e17;
     font-weight: bold;
