@@ -57,13 +57,11 @@ h2 {
 	font-style: normal;
 	color: $blue200;
 	&.icon-heading {
-		position: relative;
-		padding-left: 65px;
 		&:before {
 			content: url('../images/Logo_Small_On_Light_Variant.svg');
-			position: absolute;
-			left: 0;
+			position: relative;
 			top: 5px;
+			margin-right: 15px;
 		}
 	}
 }
@@ -125,6 +123,11 @@ p {
 	letter-spacing: 0em;
 }
 
+.rich-text {
+	ul, ol {
+		font-size: 2em;
+	}
+}
 h1, h2, h3, h4, h5 {
 	@media (max-width: 575px) { 
 		hyphens: auto;

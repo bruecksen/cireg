@@ -116,14 +116,11 @@ h2 {
   font-weight: 900;
   font-style: normal;
   color: #0c4d6c; }
-  h2.icon-heading {
+  h2.icon-heading:before {
+    content: url("../images/Logo_Small_On_Light_Variant.svg");
     position: relative;
-    padding-left: 65px; }
-    h2.icon-heading:before {
-      content: url("../images/Logo_Small_On_Light_Variant.svg");
-      position: absolute;
-      left: 0;
-      top: 5px; }
+    top: 5px;
+    margin-right: 15px; }
 
 h3 {
   margin-top: 32px;
@@ -187,6 +184,9 @@ p {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0em; }
+
+.rich-text ul, .rich-text ol {
+  font-size: 2em; }
 
 @media (max-width: 575px) {
   h1, h2, h3, h4, h5 {
