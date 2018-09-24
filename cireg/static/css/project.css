@@ -540,7 +540,11 @@ header.medium .navbar-main {
           border-left: .25em solid transparent;
           border-bottom: 0;
           -webkit-transform: rotate(270deg);
-                  transform: rotate(270deg); } }
+                  transform: rotate(270deg); }
+      .nav-item.dropdown .dropdown-menu .dropdown-item:active, .nav-item.dropdown .dropdown-menu .dropdown-item:hover, .nav-item.dropdown .dropdown-menu .dropdown-item:focus {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: transparent; } }
 
 @media (min-width: 576px) {
   .nav-item.dropdown.show .dropdown-toggle:after {
