@@ -1034,8 +1034,12 @@ section.download-page-content {
 			// }
 		}
 	}
-	a:hover {
-		text-decoration: none;
+	a {
+		border-bottom: none;
+		display: inline;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	h5, h6 {
 		margin-left: 110px;
