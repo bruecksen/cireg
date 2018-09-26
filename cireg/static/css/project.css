@@ -257,8 +257,8 @@ h3.chapter {
     -webkit-box-shadow: 0 0 0 0.4rem rgba(238, 160, 10, 0.5);
             box-shadow: 0 0 0 0.4rem rgba(238, 160, 10, 0.5); }
   .btn-primary:hover {
-    color: #032738;
-    background-color: #eea00a;
+    color: #eea00a;
+    background-color: rgba(238, 160, 10, 0.15);
     border-color: #eea00a; }
   @media (max-width: 575px) {
     .btn-primary {
@@ -684,7 +684,8 @@ footer .navbar-footer {
     font-family: 'Martel', serif;
     font-size: 41.6px;
     font-size: 2.6rem;
-    line-height: 1.54; }
+    line-height: 1.54;
+    color: #e6e9eb; }
   @media (max-width: 575px) {
     #hero-slider .intro {
       padding: 25px 30px; }
@@ -856,7 +857,8 @@ section.download-page-content .download-item {
       .project-diary .card {
         margin-bottom: 50px; } }
     .project-diary .card:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      border-bottom: 4px solid #ccd3d7; }
     .project-diary .card .card-body {
       padding: 32px;
       padding: 2rem; }
@@ -886,8 +888,8 @@ section.download-page-content .download-item {
       bottom: 40px;
       bottom: 2.5rem; }
   .project-diary .show-all {
-    margin: 80px 0 144px 0;
-    margin: 5rem 0 9rem 0; }
+    margin: 48px 0 160px 0;
+    margin: 3rem 0 10rem 0; }
     @media (max-width: 575px) {
       .project-diary .show-all {
         margin: 0 0 8rem 0; } }
@@ -913,7 +915,10 @@ section.download-page-content .download-item {
     bottom: 0;
     -webkit-transform: translateX(-50%) translateY(50%);
             transform: translateX(-50%) translateY(50%);
-    width: 80%; }
+    -webkit-transition: outline .2s ease-in;
+    transition: outline .2s ease-in;
+    width: 80%;
+    outline: 4px solid #032738; }
     @media (max-width: 575px) {
       .case-studies .card-box {
         width: 90%;
@@ -923,6 +928,8 @@ section.download-page-content .download-item {
       top: 50%;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
+    .case-studies .card-box:hover {
+      outline: 4px solid #0c638d; }
   .case-studies a:hover {
     text-decoration: none; }
   .case-studies h5, .case-studies h6 {

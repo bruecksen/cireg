@@ -226,8 +226,8 @@ h3.chapter {
 		box-shadow: 0 0 0 0.4rem rgba(238, 160, 10, 0.5);
 	}
 	&:hover {
-		color: $blue100;
-		background-color: $orange200;
+		color: $orange200;
+		background-color: rgba(238, 160, 10, 0.15);
 		border-color: $orange200;
 	}
 	@media (max-width: 575px) { 
@@ -748,6 +748,7 @@ footer {
 			font-family: 'Martel', serif;
 			font-size: 2.6rem;
 			line-height: 1.54;
+			color: $grey400;
 		}
 		@media (max-width: 575px) {
 			padding: 25px 30px;
@@ -927,6 +928,10 @@ section.download-page-content {
 		}
 		&:hover {
 			cursor: pointer;
+			border-bottom: 4px solid $grey300;
+			// .btn-secondary {
+			// 	border-color: #cf8e17;
+			// }
 		}
 		.card-body {
 			padding: 2rem;
@@ -958,7 +963,7 @@ section.download-page-content {
 		}
 	}
 	.show-all {
-		margin: 5rem 0 9rem 0;
+		margin: 3rem 0 10rem 0;
 		@media (max-width: 575px) {
 			margin: 0 0 8rem 0;
 		}
@@ -984,7 +989,9 @@ section.download-page-content {
 		left: 50%;
 		bottom: 0;
 		transform: translateX(-50%) translateY(50%);
+		transition: outline .2s ease-in;
 		width: 80%;
+		outline: 4px solid $blue100;
 		@media (max-width: 575px) { 
 			width: 90%;
 			padding: 1.8rem 3rem;
@@ -993,6 +1000,9 @@ section.download-page-content {
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
+		}
+		&:hover {
+			outline: 4px solid $blue300;
 		}
 	}
 	a:hover {
