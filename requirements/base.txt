@@ -9,3 +9,5 @@ argon2-cffi==18.1.0  # https://github.com/hynek/argon2_cffi
 wagtail<2.3
 wagtailfontawesome==1.1.3
 wagtailtrans<2.1
+django-publications-bootstrap==2.3.1
+django-decorator-include==2.0

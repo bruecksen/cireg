@@ -1,0 +1,16 @@
+{% load wagtailcore_tags i18n %}
+<section class="page-content">
+    <div class="container clearfix">
+        {% if case_studies|length > 1 %}
+        {% endif %}
+        {% if page.highlight_key %}
+        <div class="highlight">
+            <p><b>{{ page.highlight_key }}</b> {{page.highlight_value}}</p>
+        </div>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        {% for block in page.content %}
+            {{ block }}
+        {% endfor %}
+    </div>
+</section>
