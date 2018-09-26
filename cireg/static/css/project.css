@@ -886,8 +886,8 @@ section.download-page-content .download-item {
       bottom: 40px;
       bottom: 2.5rem; }
   .project-diary .show-all {
-    margin: 160px 0 224px 0;
-    margin: 10rem 0 14rem 0; }
+    margin: 80px 0 144px 0;
+    margin: 5rem 0 9rem 0; }
     @media (max-width: 575px) {
       .project-diary .show-all {
         margin: 0 0 8rem 0; } }
