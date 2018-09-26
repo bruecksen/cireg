@@ -211,7 +211,8 @@ p {
             hyphens: auto; } }
 
 .rich-text + h2,
-p + h2 {
+p + h2,
+.two-columns + h2 {
   margin-top: 96px;
   margin-top: 6rem; }
 

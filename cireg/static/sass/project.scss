@@ -149,7 +149,8 @@ h1, h2, h3, h4, h5 {
 
 
 .rich-text + h2,
-p + h2 {
+p + h2,
+.two-columns + h2 {
 	margin-top: 6rem;
 }
 
