@@ -850,7 +850,9 @@ section.download-page-content .download-item {
     color: #cf8e17;
     font-weight: bold;
     text-decoration: none;
-    border-bottom: 3px solid #e6e9eb; }
+    border-bottom: 3px solid #e6e9eb;
+    display: inline-block;
+    line-height: 24px; }
     .content-page a:hover {
       text-decoration: none;
       color: #cf8e17;
