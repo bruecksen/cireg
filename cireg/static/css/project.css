@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* assistant-200 - latin */
 @font-face {
   font-family: 'Assistant';
@@ -191,6 +192,12 @@ p {
   padding-left: 2rem;
   line-height: 54.4px;
   line-height: 3.4rem; }
+
+.rich-text ul {
+  list-style-type: none; }
+  .rich-text ul li:before {
+    content: "·";
+    vertical-align: middle; }
 
 @media (max-width: 575px) {
   h1, h2, h3, h4, h5 {
