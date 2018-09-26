@@ -936,9 +936,6 @@ section.download-page-content .download-item {
     @media (max-width: 575px) {
       .case-studies .card {
         margin-bottom: 150px; } }
-    .case-studies .card:hover > img {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1); }
   .case-studies .card-box {
     padding: 32px 64px;
     padding: 2rem 4rem;
