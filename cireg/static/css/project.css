@@ -194,10 +194,15 @@ p {
   line-height: 3.4rem; }
 
 .rich-text ul {
-  list-style-type: none; }
+  list-style-type: none;
+  padding-left: 0; }
   .rich-text ul li:before {
     content: "·";
-    vertical-align: middle; }
+    vertical-align: bottom;
+    font-size: 48px;
+    font-size: 3rem;
+    margin-right: 11.2px;
+    margin-right: .7rem; }
 
 @media (max-width: 575px) {
   h1, h2, h3, h4, h5 {
