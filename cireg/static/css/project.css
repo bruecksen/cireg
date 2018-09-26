@@ -620,6 +620,11 @@ header.medium .navbar-main {
         .nav-item.dropdown .dropdown-menu .dropdown-item.active:before {
           opacity: 1; } }
 
+@media (min-width: 576px) {
+  #main-nav .navbar-nav .nav-item:first-child .dropdown-menu {
+    width: calc(100% + 5.1rem);
+    right: -15px; } }
+
 footer .logos {
   padding: 16px 0; }
   footer .logos img {
