@@ -283,7 +283,6 @@ h3.chapter {
 .badge {
 	font-size: 16px;
 	text-transform: uppercase;
-	line-height: 1;
 	padding: 7px 14px;
 	border-radius: 2rem;
 	&.badge-primary {
@@ -851,11 +850,14 @@ section.download-page-content {
 			// position: relative;
 			// paddin-left: 25px;
 			font-size: 2rem;
+			display: inline-block;
+			margin-top: 3rem;
 			img {
 				height: 24px;
 				width: 20px;
 				margin-top: -13px;
 				margin-bottom: 0;
+				margin-right: 10px;
 			}
 		}
 	}
@@ -935,7 +937,8 @@ section.download-page-content {
 			border-bottom: 3px solid $orange100;
 		}
 		&.badge {
-			font-weight: normal;
+			line-height: 14px;
+			font-weight: 600;
 			border-bottom: 0;
 		}
 	}
