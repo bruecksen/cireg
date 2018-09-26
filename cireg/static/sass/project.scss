@@ -45,13 +45,16 @@ h1 {
 	font-weight: 900;
 	font-style: normal;
 	color: $blue200;
+	@media (max-width: 575px) { 
+		font-size: 4.4em;
+	}
 }
 
 h2 {
 	margin-top: 2rem;
 	margin-bottom: 1.2rem;
 	font-family: 'Martel', serif;
-	font-size: 4.394000000000001em;
+	font-size: 4.4em;
 	line-height: 6.8rem;
 	font-weight: 900;
 	font-style: normal;
@@ -64,18 +67,24 @@ h2 {
 			margin-right: 15px;
 		}
 	}
+	@media (max-width: 575px) { 
+		font-size: 3.4em;
+	}
 }
 
 h3 {
 	margin-top: 2rem;
 	margin-bottom: .25rem;
 	font-family: 'Martel', serif;
-	font-size: 3.3800000000000003em;
+	font-size: 3.4em;
 	line-height: 3.4rem;
 	font-weight: 900;
 	font-style: normal;
 	letter-spacing: 0em;
 	color: $blue200;
+	@media (max-width: 575px) { 
+		font-size: 2.6em;
+	}
 }
 
 h4 {
@@ -88,6 +97,9 @@ h4 {
 	font-style: normal;
 	letter-spacing: 0em;
 	color: $blue200;
+	@media (max-width: 575px) { 
+		font-size: 2.6em;
+	}
 }
 
 h5 {
