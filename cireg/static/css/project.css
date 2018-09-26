@@ -467,15 +467,15 @@ header.large .navbar-main {
   header.large .navbar-main .navbar-brand img.large {
     position: static;
     opacity: 1;
-    -webkit-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out; }
+    -webkit-transition: opacity .9s ease-in-out;
+    transition: opacity .9s ease-in-out; }
 
 header.medium .navbar-meta {
   display: none; }
 
 header.medium .navbar-main {
-  -webkit-transition: background-color .4s ease-out;
-  transition: background-color .4s ease-out;
+  -webkit-transition: background-color .7s ease-in-out;
+  transition: background-color .7s ease-in-out;
   height: 90px;
   background-color: #032738;
   top: 0;
@@ -496,8 +496,8 @@ header.medium .navbar-main {
   header.medium .navbar-main .navbar-brand img.medium {
     opacity: 1;
     position: static;
-    -webkit-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out; }
+    -webkit-transition: opacity .9s ease-in-out;
+    transition: opacity .9s ease-in-out; }
   header.medium .navbar-main .navbar-brand img.large {
     position: absolute;
     top: -9999px;

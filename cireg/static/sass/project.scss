@@ -480,7 +480,7 @@ header {
 				img.large {
 					position: static;
 					opacity: 1;
-					transition: opacity .5s ease-in-out;
+					transition: opacity .9s ease-in-out;
 				}
 			}
 		}
@@ -490,7 +490,7 @@ header {
 			display: none;
 		}
 		.navbar-main {
-			transition: background-color .4s ease-out;
+			transition: background-color .7s ease-in-out;
 			height: 90px;
 			background-color: $blue100;
 			top: 0;
@@ -514,7 +514,7 @@ header {
 				img.medium {
 					opacity: 1;
 					position: static;
-					transition: opacity .5s ease-in-out;
+					transition: opacity .9s ease-in-out;
 				}
 				img.large {
 					position: absolute;
