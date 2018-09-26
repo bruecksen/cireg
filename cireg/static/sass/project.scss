@@ -1029,9 +1029,9 @@ section.download-page-content {
 		}
 		&:hover {
 			outline: 4px solid $blue300;
-			img {
-				transform: scale(1.1);
-			}
+			// img {
+			// 	transform: scale(1.1);
+			// }
 		}
 	}
 	a:hover {

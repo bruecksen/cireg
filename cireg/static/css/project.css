@@ -958,9 +958,6 @@ section.download-page-content .download-item {
               transform: translateY(-50%); }
     .case-studies .card-box:hover {
       outline: 4px solid #0c638d; }
-      .case-studies .card-box:hover img {
-        -webkit-transform: scale(1.1);
-                transform: scale(1.1); }
   .case-studies a:hover {
     text-decoration: none; }
   .case-studies h5, .case-studies h6 {
