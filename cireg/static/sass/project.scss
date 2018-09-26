@@ -49,7 +49,7 @@ h1 {
 
 h2 {
 	margin-top: 2rem;
-	margin-bottom: .5rem;
+	margin-bottom: 1.2rem;
 	font-family: 'Martel', serif;
 	font-size: 4.394000000000001em;
 	line-height: 6.8rem;
@@ -132,6 +132,11 @@ h1, h2, h3, h4, h5 {
 	@media (max-width: 575px) { 
 		hyphens: auto;
 	}
+}
+
+
+p + h2 {
+	margin-top: 6rem;
 }
 
 // h1 + p {
@@ -1003,6 +1008,9 @@ section.download-page-content {
 		}
 		&:hover {
 			outline: 4px solid $blue300;
+			img {
+				transform: scale(1.1);
+			}
 		}
 	}
 	a:hover {
@@ -1054,8 +1062,9 @@ section.download-page-content {
 		border-color: $orange100;
 		color: $white;
 		&:hover {
-			background-color: $white;
-			color: $orange100;
+			background: darken($orange100, 5%);
+			color: $white;
+			border-color: darken($orange100, 5%);
 		}
 	}
 }

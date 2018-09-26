@@ -107,8 +107,8 @@ h1 {
 h2 {
   margin-top: 32px;
   margin-top: 2rem;
-  margin-bottom: 8px;
-  margin-bottom: .5rem;
+  margin-bottom: 19.2px;
+  margin-bottom: 1.2rem;
   font-family: 'Martel', serif;
   font-size: 4.394000000000001em;
   line-height: 108.8px;
@@ -193,6 +193,10 @@ p {
     -webkit-hyphens: auto;
         -ms-hyphens: auto;
             hyphens: auto; } }
+
+p + h2 {
+  margin-top: 96px;
+  margin-top: 6rem; }
 
 h3.chapter {
   font-size: 20px;
@@ -930,6 +934,9 @@ section.download-page-content .download-item {
               transform: translateY(-50%); }
     .case-studies .card-box:hover {
       outline: 4px solid #0c638d; }
+      .case-studies .card-box:hover img {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1); }
   .case-studies a:hover {
     text-decoration: none; }
   .case-studies h5, .case-studies h6 {
@@ -974,8 +981,9 @@ section.download-page-content .download-item {
     border-color: #cf8e17;
     color: #ffffff; }
     .newsletter .btn-primary:hover {
-      background-color: #ffffff;
-      color: #cf8e17; }
+      background: #b87e14;
+      color: #ffffff;
+      border-color: #b87e14; }
 
 .facts {
   background-color: #032738;
