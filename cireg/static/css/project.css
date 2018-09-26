@@ -210,6 +210,11 @@ p + h2 {
   margin-top: 96px;
   margin-top: 6rem; }
 
+.two-columns,
+.four-columns {
+  margin-top: 96px;
+  margin-top: 6rem; }
+
 h3.chapter {
   font-size: 20px;
   font-family: 'Assistant', sans-serif;
