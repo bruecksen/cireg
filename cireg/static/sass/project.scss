@@ -576,12 +576,18 @@ header {
 
 // #### DROPDOWN MENU
 .nav-item.dropdown {
-	.dropdown-toggle:after {
-		margin-left: .555em;
-		vertical-align: .155em;
-		border-top: .25em solid;
-		border-right: .25em solid transparent;
-		border-left: .25em solid transparent;
+	&:hover > .dropdown-menu {
+		// display: block;
+	}
+	.dropdown-toggle {
+		outline: none;
+		&:after {
+			margin-left: .555em;
+			vertical-align: .155em;
+			border-top: .25em solid;
+			border-right: .25em solid transparent;
+			border-left: .25em solid transparent;
+		}
 	}
 	@media (max-width: 575px) {
 		.dropdown-menu {
@@ -1007,6 +1013,9 @@ section.download-page-content {
 		@media (max-width: 575px) { 
 			margin-bottom: 150px;
 		}
+		&:hover > img{
+			transform: scale(1.1);
+		}
 	}
 	.card-box {
 		padding: 2rem 4rem;
@@ -1029,9 +1038,6 @@ section.download-page-content {
 		}
 		&:hover {
 			outline: 4px solid $blue300;
-			// img {
-			// 	transform: scale(1.1);
-			// }
 		}
 	}
 	a {

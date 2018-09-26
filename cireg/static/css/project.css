@@ -547,12 +547,14 @@ header.medium .navbar-main {
     header .navbar-main .navbar-brand img.large {
       display: none; } }
 
-.nav-item.dropdown .dropdown-toggle:after {
-  margin-left: .555em;
-  vertical-align: .155em;
-  border-top: .25em solid;
-  border-right: .25em solid transparent;
-  border-left: .25em solid transparent; }
+.nav-item.dropdown .dropdown-toggle {
+  outline: none; }
+  .nav-item.dropdown .dropdown-toggle:after {
+    margin-left: .555em;
+    vertical-align: .155em;
+    border-top: .25em solid;
+    border-right: .25em solid transparent;
+    border-left: .25em solid transparent; }
 
 @media (max-width: 575px) {
   .nav-item.dropdown .dropdown-menu {
@@ -934,6 +936,9 @@ section.download-page-content .download-item {
     @media (max-width: 575px) {
       .case-studies .card {
         margin-bottom: 150px; } }
+    .case-studies .card:hover > img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
   .case-studies .card-box {
     padding: 32px 64px;
     padding: 2rem 4rem;

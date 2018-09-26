@@ -45,6 +45,11 @@ $(document).ready(function() {
       // options
     });
 
+    // toggle dropdown on hover
+    $('.navbar-nav .nav-item.dropdown').hover(function(){
+        console.log("hover");
+        $(this).find('.dropdown-toggle').dropdown('toggle');
+    });
     // store filter for each group
     var filters = {};
 
