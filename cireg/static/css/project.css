@@ -194,6 +194,7 @@ p {
         -ms-hyphens: auto;
             hyphens: auto; } }
 
+.rich-text + h2,
 p + h2 {
   margin-top: 96px;
   margin-top: 6rem; }
