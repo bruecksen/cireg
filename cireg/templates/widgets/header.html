@@ -30,7 +30,7 @@
                     {% for menu_item in main_menu %}
                       <li class="nav-item{% if menu_item.active %} active{% endif %}{% if menu_item.children %} dropdown{% endif %}">
                         <a class="nav-link{% if menu_item.children %} dropdown-toggle{% endif %}" href="{{ menu_item.url }}"{% if menu_item.children %}role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>{{ menu_item.text }}</a>
-                        <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-menu dropdown-menu-right fade">
                             {% for child in menu_item.children %}
                                 <a class="dropdown-item{% if child.active %} active{% endif %}" href="{{ child.url }}">{{ child.text }}</a>
                             {% endfor %}

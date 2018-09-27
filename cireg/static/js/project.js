@@ -45,8 +45,8 @@ $(document).ready(function() {
       // options
     });
 
-    var dropdownIsOpen = false;
     // toggle dropdown on hover
+    var dropdownIsOpen = false;
     $('.navbar-nav .nav-item.dropdown').hover(function(){
         if ($(this).hasClass('show') == dropdownIsOpen) {
             $(this).find('.dropdown-toggle').dropdown('toggle');

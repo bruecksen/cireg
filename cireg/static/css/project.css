@@ -566,6 +566,10 @@ header.medium .navbar-main {
     header .navbar-main .navbar-brand img.large {
       display: none; } }
 
+.nav-item.dropdown.show > .dropdown-menu.fade {
+  pointer-events: auto;
+  opacity: 1; }
+
 .nav-item.dropdown .dropdown-toggle {
   outline: none; }
   .nav-item.dropdown .dropdown-toggle:after {
@@ -627,6 +631,10 @@ header.medium .navbar-main {
     padding-bottom: 0;
     width: calc(100% + 4rem);
     border-radius: 3px; }
+    .nav-item.dropdown .dropdown-menu.fade {
+      display: block;
+      opacity: 0;
+      pointer-events: none; }
     .nav-item.dropdown .dropdown-menu .dropdown-item {
       font-size: 1.6rem;
       color: #032738;

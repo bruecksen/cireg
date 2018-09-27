@@ -594,8 +594,9 @@ header {
 
 // #### DROPDOWN MENU
 .nav-item.dropdown {
-	&:hover > .dropdown-menu {
-		// display: block;
+	&.show > .dropdown-menu.fade {
+		pointer-events: auto;
+		opacity: 1;
 	}
 	.dropdown-toggle {
 		outline: none;
@@ -663,6 +664,11 @@ header {
 			padding-bottom: 0;
 			width: calc(100% + 4rem);
 			border-radius: 3px;
+			&.fade {
+				display: block;
+				opacity: 0;
+				pointer-events: none;
+			}
 			.dropdown-item {
 				font-size: 1.6rem;
 				color: $blue100;
