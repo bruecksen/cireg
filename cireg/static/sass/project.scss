@@ -360,9 +360,19 @@ h3.chapter {
 		}
 	}
 }
-.figure-caption {
-	font-size: 16px;
-	color: $blue100;
+figure {
+	height: 100%;
+	img {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.figure-caption {
+		font-size: 16px;
+		color: $blue100;
+		position: absolute;
+		bottom: 0;
+	}
 }
 
 .form-control,
