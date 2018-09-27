@@ -1250,8 +1250,9 @@ section.download-page-content {
 	font-size: 1.5rem;
 	padding-right: 12rem;
 	margin: 0;
-	border-top: 1px solid $grey400;
+	border: none;
 	border-radius: 0;
+	border-top: 1px solid $grey400;
 	.btn-primary {
 		opacity: 1;
 		background-color: $orange200;
