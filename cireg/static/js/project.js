@@ -45,10 +45,13 @@ $(document).ready(function() {
       // options
     });
 
+    var dropdownIsOpen = false;
     // toggle dropdown on hover
     $('.navbar-nav .nav-item.dropdown').hover(function(){
-        // console.log("hover");
-        // $(this).find('.dropdown-toggle').dropdown('toggle');
+        if ($(this).hasClass('show') == dropdownIsOpen) {
+            $(this).find('.dropdown-toggle').dropdown('toggle');
+            dropdownIsOpen = $(this).hasClass('show');
+        }
     });
     // store filter for each group
     var filters = {};
