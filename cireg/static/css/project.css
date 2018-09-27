@@ -858,20 +858,29 @@ section.download-page-content .download-item {
       -webkit-box-shadow: 0 4px 0 0 #e6e9eb;
               box-shadow: 0 4px 0 0 #e6e9eb;
       border-radius: 3px; }
-      .content-page section.page-content .container.project-diary,
-      .content-page section.download-page-content .container.project-diary {
+      .content-page section.page-content .container.project-diary, .content-page section.page-content .container.case-study-overview,
+      .content-page section.download-page-content .container.project-diary,
+      .content-page section.download-page-content .container.case-study-overview {
         margin-top: 0;
         background-color: #f7f7f7;
         position: relative;
         -webkit-box-shadow: none;
                 box-shadow: none; }
-        .content-page section.page-content .container.project-diary h1,
-        .content-page section.download-page-content .container.project-diary h1 {
+        .content-page section.page-content .container.project-diary h1, .content-page section.page-content .container.case-study-overview h1,
+        .content-page section.download-page-content .container.project-diary h1,
+        .content-page section.download-page-content .container.case-study-overview h1 {
           position: absolute;
           top: -100px;
           color: #f7f7f7;
-          width: 100%;
-          text-align: center; }
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%);
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content; }
+      .content-page section.page-content .container.case-study-overview,
+      .content-page section.download-page-content .container.case-study-overview {
+        margin-bottom: 100px; }
       @media (max-width: 575px) {
         .content-page section.page-content .container,
         .content-page section.download-page-content .container {

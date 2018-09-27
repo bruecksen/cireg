@@ -112,8 +112,19 @@ class ProjectDiaryEntry(TranslatablePage, Page):
     template = 'pages/project_diary_page.html'
 
 
+class CaseStudyOverview(TranslatablePage, Page):
+    parent_page_types = ['cms.HomePage', 'cms.ContentPage']
+    template = 'pages/case_study_overview.html'
+
+    def get_context(self, request):
+        context = super().get_context(request)
+        case_studies = CaseStudy.objects.child_of(self).live()
+        context['case_studies'] = case_studies
+        return context
+
+
 class CaseStudy(TranslatablePage, Page):
-    parent_page_types = ['cms.ContentPage']
+    parent_page_types = ['cms.ContentPage', 'cms.CaseStudyOverview']
 
     subtitle = models.CharField(max_length=500)
     teaser_image = models.ForeignKey('wagtailimages.Image', on_delete=models.PROTECT, help_text="This image is used for the teaser boxes at the homepage.")
