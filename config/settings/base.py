@@ -80,6 +80,7 @@ THIRD_PARTY_APPS = [
     'wagtailtrans',
     'publications_bootstrap',
     'decorator_include',
+    'cookielaw',
 ]
 LOCAL_APPS = [
     'cireg.core.apps.CoreConfig',

@@ -1154,3 +1154,38 @@ section.download-page-content .download-item {
 .login .btn-primary {
   font-size: 20px;
   padding: 5px 15px; }
+
+#CookielawBanner {
+  position: fixed;
+  bottom: 0;
+  background-color: #032738;
+  color: #ffffff;
+  font-size: 24px;
+  font-size: 1.5rem;
+  padding-right: 192px;
+  padding-right: 12rem;
+  margin: 0;
+  border-top: 1px solid #e6e9eb;
+  border-radius: 0; }
+  #CookielawBanner .btn-primary {
+    opacity: 1;
+    background-color: #eea00a;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 32px;
+    font-size: 2rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 15px; }
+  @media (max-width: 575px) {
+    #CookielawBanner {
+      padding-right: 0;
+      padding-bottom: 6rem; }
+      #CookielawBanner .btn-primary {
+        top: unset;
+        right: unset;
+        bottom: 15px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); } }

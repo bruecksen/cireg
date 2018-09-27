@@ -15,6 +15,7 @@ raven = "*"
 argon2_cffi = "*"
 django-publications-bootstrap = "*"
 django-decorator-include = "*"
+django-cookie-law = "*"
 
 [dev-packages]
 werkzeug = "*"

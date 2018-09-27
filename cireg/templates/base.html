@@ -1,4 +1,4 @@
-{% load static i18n cireg %}<!DOCTYPE html>
+{% load static i18n cireg cookielaw_tags %}<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -60,9 +60,10 @@
   {% block footer %}
     {% footer %}
   {% endblock %}
+  {% cookielaw_banner %}
 
 
-    <!-- Le javascript
+    <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
@@ -71,6 +72,7 @@
       <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
       <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
       <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+      <script src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
 
       <!-- Your stuff: Third-party javascript libraries go here -->
 

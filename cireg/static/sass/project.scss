@@ -1241,3 +1241,36 @@ section.download-page-content {
 	font-size: 20px;
 	padding: 5px 15px;
 }
+
+#CookielawBanner {
+	position: fixed;
+	bottom: 0;
+	background-color: $blue100;
+	color: $white;
+	font-size: 1.5rem;
+	padding-right: 12rem;
+	margin: 0;
+	border-top: 1px solid $grey400;
+	border-radius: 0;
+	.btn-primary {
+		opacity: 1;
+		background-color: $orange200;
+		color: $white;
+		text-shadow: none;
+		font-size: 2rem;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 15px;
+	}
+	@media (max-width: 575px) { 
+		padding-right: 0;
+		padding-bottom: 6rem;
+		.btn-primary {
+			top: unset;
+			right: unset;
+			bottom: 15px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
