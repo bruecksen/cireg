@@ -9,7 +9,7 @@
         <section class="page-content">
             <div class="container project-diary">
                 {% if tag %}
-                <h1>Entries with the tag {{ tag }}</h1>
+                <h1>{% trans "Entries with the tag" %} {{ tag }}</h1>
                 {% else%}
                 <h1>{{ page.title }}</h1>
                 {% endif %}

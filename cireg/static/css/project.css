@@ -745,6 +745,8 @@ footer .navbar-footer {
     font-size: 2.6rem;
     line-height: 1.54;
     color: #e6e9eb; }
+    #hero-slider .intro p b {
+      color: #ffffff; }
     #hero-slider .intro p.source {
       line-height: 1.88;
       font-size: 25.6px;
