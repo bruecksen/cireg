@@ -794,84 +794,6 @@ section.download-page-content .download-item {
 
 .content-page {
   background-color: #f7f7f7; }
-  .content-page section.page-content .container,
-  .content-page section.download-page-content .container {
-    margin-top: -100px;
-    background-color: #ffffff;
-    padding: 50px 30px;
-    -webkit-box-shadow: 0 4px 0 0 #e6e9eb;
-            box-shadow: 0 4px 0 0 #e6e9eb;
-    border-radius: 3px; }
-    @media (max-width: 575px) {
-      .content-page section.page-content .container,
-      .content-page section.download-page-content .container {
-        margin-top: 90px; } }
-    .content-page section.page-content .container .highlight,
-    .content-page section.download-page-content .container .highlight {
-      text-align: right;
-      margin-bottom: 96px;
-      margin-bottom: 6rem; }
-      @media (max-width: 575px) {
-        .content-page section.page-content .container .highlight,
-        .content-page section.download-page-content .container .highlight {
-          text-align: left;
-          margin-bottom: 3rem; } }
-      .content-page section.page-content .container .highlight p,
-      .content-page section.download-page-content .container .highlight p {
-        display: inline-block;
-        font-size: 16px;
-        background-color: #f7f7f7;
-        padding: 10px 16px;
-        line-height: 1; }
-    .content-page section.page-content .container .tags,
-    .content-page section.page-content .container .filter,
-    .content-page section.download-page-content .container .tags,
-    .content-page section.download-page-content .container .filter {
-      font-size: 32px;
-      font-size: 2rem;
-      margin-bottom: 96px;
-      margin-bottom: 6rem;
-      margin-top: 32px;
-      margin-top: 2rem; }
-      .content-page section.page-content .container .tags ul,
-      .content-page section.page-content .container .filter ul,
-      .content-page section.download-page-content .container .tags ul,
-      .content-page section.download-page-content .container .filter ul {
-        display: inline; }
-      .content-page section.page-content .container .tags span,
-      .content-page section.page-content .container .filter span,
-      .content-page section.download-page-content .container .tags span,
-      .content-page section.download-page-content .container .filter span {
-        float: left;
-        margin-right: 16px;
-        margin-right: 1rem; }
-      .content-page section.page-content .container .tags .historical,
-      .content-page section.page-content .container .filter .historical,
-      .content-page section.download-page-content .container .tags .historical,
-      .content-page section.download-page-content .container .filter .historical {
-        margin-left: 96px;
-        margin-left: 6rem; }
-      @media (max-width: 575px) {
-        .content-page section.page-content .container .tags ul, .content-page section.page-content .container .tags span,
-        .content-page section.page-content .container .filter ul,
-        .content-page section.page-content .container .filter span,
-        .content-page section.download-page-content .container .tags ul,
-        .content-page section.download-page-content .container .tags span,
-        .content-page section.download-page-content .container .filter ul,
-        .content-page section.download-page-content .container .filter span {
-          display: block;
-          clear: both; }
-        .content-page section.page-content .container .tags .historical,
-        .content-page section.page-content .container .filter .historical,
-        .content-page section.download-page-content .container .tags .historical,
-        .content-page section.download-page-content .container .filter .historical {
-          margin-left: 0; } }
-    .content-page section.page-content .container hr,
-    .content-page section.download-page-content .container hr {
-      height: 3px;
-      border-radius: 2px;
-      border-top: 0;
-      background-color: #f7f7f7; }
   .content-page a {
     color: #cf8e17;
     font-weight: bold;
@@ -887,6 +809,87 @@ section.download-page-content .download-item {
       line-height: 14px;
       font-weight: 600;
       border-bottom: 0; }
+  .content-page section.page-content,
+  .content-page section.download-page-content {
+    min-height: 500px; }
+    .content-page section.page-content .container,
+    .content-page section.download-page-content .container {
+      margin-top: -100px;
+      background-color: #ffffff;
+      padding: 50px 30px;
+      -webkit-box-shadow: 0 4px 0 0 #e6e9eb;
+              box-shadow: 0 4px 0 0 #e6e9eb;
+      border-radius: 3px; }
+      @media (max-width: 575px) {
+        .content-page section.page-content .container,
+        .content-page section.download-page-content .container {
+          margin-top: 90px; } }
+      .content-page section.page-content .container .highlight,
+      .content-page section.download-page-content .container .highlight {
+        text-align: right;
+        margin-bottom: 96px;
+        margin-bottom: 6rem; }
+        @media (max-width: 575px) {
+          .content-page section.page-content .container .highlight,
+          .content-page section.download-page-content .container .highlight {
+            text-align: left;
+            margin-bottom: 3rem; } }
+        .content-page section.page-content .container .highlight p,
+        .content-page section.download-page-content .container .highlight p {
+          display: inline-block;
+          font-size: 16px;
+          background-color: #f7f7f7;
+          padding: 10px 16px;
+          line-height: 1; }
+      .content-page section.page-content .container .tags,
+      .content-page section.page-content .container .filter,
+      .content-page section.download-page-content .container .tags,
+      .content-page section.download-page-content .container .filter {
+        font-size: 32px;
+        font-size: 2rem;
+        margin-bottom: 96px;
+        margin-bottom: 6rem;
+        margin-top: 32px;
+        margin-top: 2rem; }
+        .content-page section.page-content .container .tags ul,
+        .content-page section.page-content .container .filter ul,
+        .content-page section.download-page-content .container .tags ul,
+        .content-page section.download-page-content .container .filter ul {
+          display: inline; }
+        .content-page section.page-content .container .tags span,
+        .content-page section.page-content .container .filter span,
+        .content-page section.download-page-content .container .tags span,
+        .content-page section.download-page-content .container .filter span {
+          float: left;
+          margin-right: 16px;
+          margin-right: 1rem; }
+        .content-page section.page-content .container .tags .historical,
+        .content-page section.page-content .container .filter .historical,
+        .content-page section.download-page-content .container .tags .historical,
+        .content-page section.download-page-content .container .filter .historical {
+          margin-left: 96px;
+          margin-left: 6rem; }
+        @media (max-width: 575px) {
+          .content-page section.page-content .container .tags ul, .content-page section.page-content .container .tags span,
+          .content-page section.page-content .container .filter ul,
+          .content-page section.page-content .container .filter span,
+          .content-page section.download-page-content .container .tags ul,
+          .content-page section.download-page-content .container .tags span,
+          .content-page section.download-page-content .container .filter ul,
+          .content-page section.download-page-content .container .filter span {
+            display: block;
+            clear: both; }
+          .content-page section.page-content .container .tags .historical,
+          .content-page section.page-content .container .filter .historical,
+          .content-page section.download-page-content .container .tags .historical,
+          .content-page section.download-page-content .container .filter .historical {
+            margin-left: 0; } }
+      .content-page section.page-content .container hr,
+      .content-page section.download-page-content .container hr {
+        height: 3px;
+        border-radius: 2px;
+        border-top: 0;
+        background-color: #f7f7f7; }
 
 .project-diary {
   padding-top: 150px; }

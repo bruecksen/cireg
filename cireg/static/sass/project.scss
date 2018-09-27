@@ -881,64 +881,6 @@ section.download-page-content {
 
 .content-page {
 	background-color: $grey500;
-	section.page-content .container,
-	section.download-page-content .container {
-		margin-top: -100px;
-		background-color: $white;
-		padding: 50px 30px;
-		box-shadow: 0 4px 0 0 $grey400;
-		border-radius: 3px;
-		@media (max-width: 575px) {
-			margin-top: 90px;
-		}
-		.highlight {
-			text-align: right;
-			margin-bottom: 6rem;
-			@media (max-width: 575px) {
-				text-align: left;
-				margin-bottom: 3rem;
-			}
-			p {
-				display: inline-block;
-				font-size: 16px;
-				background-color: $grey500;
-				padding: 10px 16px;
-				line-height: 1;
-			}
-		}
-		.tags,
-		.filter {
-			font-size: 2rem;
-			margin-bottom: 6rem;
-			margin-top: 2rem;
-			ul {
-				display: inline;
-			}
-			span {
-				float: left;
-				margin-right: 1rem;
-			}
-			.historical {
-				margin-left: 6rem;
-			}
-			@media (max-width: 575px) {
-				ul, span {
-					display: block;
-					clear: both;
-				}
-				.historical {
-					margin-left: 0;
-				}
-			}
-		}
-		hr {
-			height: 3px;
-			border-radius: 2px;
-			border-top: 0;
-			background-color: $grey500;
-		}
-	}
-
 	a {
 		color: $orange100;
 		font-weight: bold;
@@ -955,6 +897,66 @@ section.download-page-content {
 			line-height: 14px;
 			font-weight: 600;
 			border-bottom: 0;
+		}
+	}
+	section.page-content,
+	section.download-page-content {
+		min-height: 500px;
+		.container {
+			margin-top: -100px;
+			background-color: $white;
+			padding: 50px 30px;
+			box-shadow: 0 4px 0 0 $grey400;
+			border-radius: 3px;
+			@media (max-width: 575px) {
+				margin-top: 90px;
+			}
+			.highlight {
+				text-align: right;
+				margin-bottom: 6rem;
+				@media (max-width: 575px) {
+					text-align: left;
+					margin-bottom: 3rem;
+				}
+				p {
+					display: inline-block;
+					font-size: 16px;
+					background-color: $grey500;
+					padding: 10px 16px;
+					line-height: 1;
+				}
+			}
+			.tags,
+			.filter {
+				font-size: 2rem;
+				margin-bottom: 6rem;
+				margin-top: 2rem;
+				ul {
+					display: inline;
+				}
+				span {
+					float: left;
+					margin-right: 1rem;
+				}
+				.historical {
+					margin-left: 6rem;
+				}
+				@media (max-width: 575px) {
+					ul, span {
+						display: block;
+						clear: both;
+					}
+					.historical {
+						margin-left: 0;
+					}
+				}
+			}
+			hr {
+				height: 3px;
+				border-radius: 2px;
+				border-top: 0;
+				background-color: $grey500;
+			}
 		}
 	}
 }
