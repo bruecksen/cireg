@@ -638,7 +638,7 @@ header.medium .navbar-main {
     background-color: #f7f7f7;
     padding-top: 43px;
     padding-bottom: 0;
-    width: calc(100% + 4rem);
+    width: calc(100% + 2.5rem);
     border-radius: 3px; }
     .nav-item.dropdown .dropdown-menu.fade {
       display: block;
