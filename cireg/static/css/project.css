@@ -837,7 +837,6 @@ section.download-page-content .download-item {
     font-weight: bold;
     text-decoration: none;
     border-bottom: 3px solid #e6e9eb;
-    display: inline-block;
     line-height: 24px; }
     .content-page a:hover {
       text-decoration: none;
