@@ -106,7 +106,8 @@ h1 {
   color: #0c4d6c; }
   @media (max-width: 575px) {
     h1 {
-      font-size: 4.4em; } }
+      font-size: 4.4em;
+      line-height: 6.8rem; } }
 
 h2 {
   margin-top: 32px;
@@ -127,7 +128,8 @@ h2 {
     margin-right: 15px; }
   @media (max-width: 575px) {
     h2 {
-      font-size: 3.4em; } }
+      font-size: 3.4em;
+      line-height: 3.4rem; } }
 
 h3 {
   margin-top: 32px;
@@ -144,7 +146,8 @@ h3 {
   color: #0c4d6c; }
   @media (max-width: 575px) {
     h3 {
-      font-size: 2.6em; } }
+      font-size: 2.6em;
+      line-height: 3.4rem; } }
 
 h4 {
   margin-top: 32px;
@@ -161,7 +164,8 @@ h4 {
   color: #0c4d6c; }
   @media (max-width: 575px) {
     h4 {
-      font-size: 2.6em; } }
+      font-size: 2.6em;
+      line-height: 3.4rem; } }
 
 h5 {
   margin-top: 32px;
@@ -697,7 +701,7 @@ footer .navbar-footer {
 
 #hero-slider .carousel-item {
   height: 100vh;
-  max-height: 700px;
+  max-height: 650px;
   background: no-repeat bottom center scroll;
   background-size: cover; }
   @media (max-width: 575px) {
@@ -718,7 +722,7 @@ footer .navbar-footer {
   background-position: 50% 25%;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: -15%;
+  top: 350px;
   background-color: #032738;
   padding: 50px 80px;
   text-align: center;
@@ -729,11 +733,22 @@ footer .navbar-footer {
     font-size: 2.6rem;
     line-height: 1.54;
     color: #e6e9eb; }
+    #hero-slider .intro p.source {
+      line-height: 1.88;
+      font-size: 25.6px;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: #ccd3d7;
+      font-family: 'Assistant', sans-serif;
+      margin-bottom: 30px;
+      margin-top: -5px; }
   @media (max-width: 575px) {
     #hero-slider .intro {
-      padding: 25px 30px; }
+      padding: 25px 30px;
+      bottom: unset;
+      top: 125px; }
       #hero-slider .intro p {
-        font-size: 2.2rem; } }
+        font-size: 2rem; } }
 
 section.project-diary-section,
 section.newsletter {
@@ -823,7 +838,8 @@ section.download-page-content .download-item {
       @media (max-width: 575px) {
         .content-page section.page-content .container,
         .content-page section.download-page-content .container {
-          margin-top: 90px; } }
+          margin-top: 90px;
+          padding: 15px 15px; } }
       .content-page section.page-content .container .highlight,
       .content-page section.download-page-content .container .highlight {
         text-align: right;
@@ -892,7 +908,10 @@ section.download-page-content .download-item {
         background-color: #f7f7f7; }
 
 .project-diary {
-  padding-top: 150px; }
+  padding-top: 200px; }
+  @media (max-width: 575px) {
+    .project-diary {
+      padding-top: 100px; } }
   .project-diary .row {
     margin-bottom: 64px;
     margin-bottom: 4rem; }

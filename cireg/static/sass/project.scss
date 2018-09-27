@@ -47,6 +47,7 @@ h1 {
 	color: $blue200;
 	@media (max-width: 575px) { 
 		font-size: 4.4em;
+		line-height: 6.8rem;
 	}
 }
 
@@ -69,6 +70,7 @@ h2 {
 	}
 	@media (max-width: 575px) { 
 		font-size: 3.4em;
+		line-height: 3.4rem;
 	}
 }
 
@@ -84,6 +86,7 @@ h3 {
 	color: $blue200;
 	@media (max-width: 575px) { 
 		font-size: 2.6em;
+		line-height: 3.4rem;
 	}
 }
 
@@ -99,6 +102,7 @@ h4 {
 	color: $blue200;
 	@media (max-width: 575px) { 
 		font-size: 2.6em;
+		line-height: 3.4rem;
 	}
 }
 
@@ -759,7 +763,7 @@ footer {
 #hero-slider {
 	.carousel-item {
 		height: 100vh;
-		max-height: 700px;
+		max-height: 650px;
 		background: no-repeat bottom center scroll;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -783,7 +787,7 @@ footer {
 		background-position: 50% 25%;
   		background-repeat: no-repeat;
 		position: absolute;
-		bottom: -15%;
+		top: 350px;
 		background-color: $blue100;
 		padding: 50px 80px;
 		text-align: center;
@@ -793,11 +797,22 @@ footer {
 			font-size: 2.6rem;
 			line-height: 1.54;
 			color: $grey400;
+			&.source {
+				line-height: 1.88;
+				font-size: 1.6rem;
+				text-transform: uppercase;
+				color: $grey300;
+				font-family: 'Assistant', sans-serif;
+				margin-bottom: 30px;
+				margin-top: -5px;
+			}
 		}
 		@media (max-width: 575px) {
 			padding: 25px 30px;
+			bottom: unset;
+			top: 125px;
 			p {
-				font-size: 2.2rem;
+				font-size: 2rem;
 			}
 		}
 	}
@@ -910,6 +925,7 @@ section.download-page-content {
 			border-radius: 3px;
 			@media (max-width: 575px) {
 				margin-top: 90px;
+				padding: 15px 15px;
 			}
 			.highlight {
 				text-align: right;
@@ -962,7 +978,10 @@ section.download-page-content {
 }
 
 .project-diary {
-	padding-top: 150px;
+	padding-top: 200px;
+	@media (max-width: 575px) {
+		padding-top: 100px;
+	}
 	.row {
 		margin-bottom: 4rem;
 		@media (max-width: 575px) {

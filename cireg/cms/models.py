@@ -23,6 +23,7 @@ class HomePage(TranslatablePage, Page):
     parent_page_types = ['wagtailtrans.TranslatableSiteRootPage']
 
     hero_text = RichTextField()
+    hero_text_source = models.CharField(max_length=500, verbose_name="Source for hero text", null=True, blank=True)
     hero_page_link = models.ForeignKey(
         'wagtailcore.Page',
         verbose_name="Page link",
@@ -39,6 +40,7 @@ class HomePage(TranslatablePage, Page):
         MultiFieldPanel([
             InlinePanel('image_items', label="Hero images"),
             FieldPanel('hero_text'),
+            FieldPanel('hero_text_source'),
             PageChooserPanel('hero_page_link'),
             FieldPanel('hero_page_link_text'),
         ], heading="Hero"),
