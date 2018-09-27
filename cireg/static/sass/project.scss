@@ -1101,9 +1101,9 @@ section.download-page-content {
 		left: 50%;
 		top: 75%;
 		transform: translateX(-50%);
-		transition: outline .2s ease-in;
-		width: 80%;
-		outline: 4px solid $blue100;
+		transition: border .2s ease-in;
+		width: 81%;
+		border: 4px solid $blue100;
 		@media (max-width: 575px) { 
 			width: 90%;
 			padding: 1.8rem 3rem;
@@ -1114,7 +1114,7 @@ section.download-page-content {
 			transform: translateY(-50%);
 		}
 		&:hover {
-			outline: 4px solid $blue300;
+			border: 4px solid $blue300;
 		}
 	}
 	a {
