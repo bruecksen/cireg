@@ -1012,9 +1012,9 @@ section.download-page-content .download-item {
     background-color: #032738;
     position: absolute;
     left: 50%;
-    bottom: 0;
-    -webkit-transform: translateX(-50%) translateY(50%);
-            transform: translateX(-50%) translateY(50%);
+    top: 75%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     -webkit-transition: outline .2s ease-in;
     transition: outline .2s ease-in;
     width: 80%;
@@ -1025,7 +1025,7 @@ section.download-page-content .download-item {
         padding: 1.8rem 3rem; } }
     .case-studies .card-box img {
       position: absolute;
-      top: 50%;
+      top: 87px;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
     .case-studies .card-box:hover {

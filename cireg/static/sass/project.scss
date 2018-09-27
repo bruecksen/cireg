@@ -1084,8 +1084,8 @@ section.download-page-content {
 		background-color: $blue100;
 		position: absolute;
 		left: 50%;
-		bottom: 0;
-		transform: translateX(-50%) translateY(50%);
+		top: 75%;
+		transform: translateX(-50%);
 		transition: outline .2s ease-in;
 		width: 80%;
 		outline: 4px solid $blue100;
@@ -1095,7 +1095,7 @@ section.download-page-content {
 		}
 		img {
 			position: absolute;
-			top: 50%;
+			top: 87px;
 			transform: translateY(-50%);
 		}
 		&:hover {
