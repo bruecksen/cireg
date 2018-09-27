@@ -1035,7 +1035,7 @@ section.download-page-content .download-item {
             transform: translateX(-50%);
     -webkit-transition: border .2s ease-in;
     transition: border .2s ease-in;
-    width: 81%;
+    width: 82%;
     border: 4px solid #032738; }
     @media (max-width: 575px) {
       .case-studies .card-box {
