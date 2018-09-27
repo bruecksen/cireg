@@ -1025,8 +1025,8 @@ section.download-page-content .download-item {
       .case-studies .card {
         margin-bottom: 150px; } }
   .case-studies .card-box {
-    padding: 32px 64px;
-    padding: 2rem 4rem;
+    padding: 40px 40px;
+    padding: 2.5rem 2.5rem;
     background-color: #032738;
     position: absolute;
     left: 50%;
@@ -1035,7 +1035,7 @@ section.download-page-content .download-item {
             transform: translateX(-50%);
     -webkit-transition: border .2s ease-in;
     transition: border .2s ease-in;
-    width: 82%;
+    width: 91%;
     border: 4px solid #032738; }
     @media (max-width: 575px) {
       .case-studies .card-box {
