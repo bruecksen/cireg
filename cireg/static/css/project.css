@@ -884,7 +884,7 @@ section.download-page-content .download-item {
           width: fit-content; }
       .content-page section.page-content .container.case-study-overview,
       .content-page section.download-page-content .container.case-study-overview {
-        margin-bottom: 100px; }
+        margin-bottom: 150px; }
       @media (max-width: 575px) {
         .content-page section.page-content .container,
         .content-page section.download-page-content .container {
