@@ -54,57 +54,60 @@ $(document).ready(function() {
         $(this).find('.dropdown-menu').toggleClass('show');
     });
     // store filter for each group
-    var filters = {};
+    var filters = [];
+    $('.filter li a.is-checked').each(function(i, filter) {
+        filters.push($(filter).attr('data-filter'));
+    });
+    console.log(filters);
 
-    $('.filter li a').on( 'click', function( event ) {
+    check_for_empty_result = function () {
+        
+    };
+
+    $('.filter li:not(.show-all,.hide-all) a').on( 'click', function( event ) {
+        $('.no-items-found').hide();
         var $button = $( event.currentTarget );
         $button.toggleClass('is-checked');
+
         var isChecked = $button.hasClass('is-checked');
-        // get group key
-        var $buttonGroup = $button.parents('.button-group');
-        var filterGroup = $buttonGroup.attr('data-filter-group');
-        // set filter for group
+        var filter = $button.attr('data-filter');
         if ( isChecked ) {
-            addFilter( filterGroup, $button.attr('data-filter') );
+            filters.push(filter);
           } else {
-            removeFilter( filterGroup, $button.attr('data-filter') );
+            filters.splice(filters.indexOf(filter), 1);
         }
         console.log(filters);
         // combine filters
-        var filterValue = concatValues( filters );
+        var filterValue;
+        if (filters.length == 0) {
+            filterValue = '.xxxx';
+        } else {
+            filterValue = filters.join(',');
+        }
         // set filter for Isotope
         console.log(filterValue);
         $grid.isotope({ filter: filterValue });
     });
-
-    // flatten object by concatting values
-    function concatValues( obj ) {
-        var value = '';
-        for ( var prop in obj ) {
-            value += obj[ prop ].join('');
+    $('.filter .show-all').on('click', function( event ) {
+        $('.no-items-found').hide();
+        $('.filter .hide-all').show();
+        $(this).hide();
+        $('.filter li:not(.show-all,.hide-all) a:not(.is-checked)').addClass('is-checked');
+        $grid.isotope({ filter: '*' });
+    });
+    $('.filter .hide-all').on('click', function( event ) {
+        $('.filter .show-all').show();
+        $(this).hide();
+        $('.filter li:not(.show-all,.hide-all) a.is-checked').removeClass('is-checked');
+        $grid.isotope({ filter: '.xxxx' });
+    });
+    $grid.on( 'layoutComplete', function( event, laidOutItems ) {
+        if (laidOutItems.length == 0) {
+           $('.no-items-found').show();
+        } else {
+            $('.no-items-found').hide();
         }
-        return value;
-    }
-
-    function addFilter( group, filter ) {
-        var group_filters = filters[group];
-        if (group_filters===undefined) {
-            group_filters = [];
-        }
-        if ( group_filters.indexOf( filter ) == -1 ) {
-            group_filters.push( filter );
-        }
-        filters[group] = group_filters;
-    }
-
-    function removeFilter( group, filter ) {
-        var group_filters = filters[group];
-        var index = group_filters.indexOf( filter);
-        if ( index != -1 ) {
-            group_filters.splice( index, 1 );
-        }
-        filters[group] = group_filters;
-    }
+    } )
 
 })
 $(window).scroll(function(){

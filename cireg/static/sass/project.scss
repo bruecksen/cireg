@@ -345,6 +345,9 @@ h3.chapter {
 }
 .filter {
 	font-size: 2rem;
+	span {
+		color: $blue100;
+	}
 	.badge.badge-secondary {
 		background-color: $grey300;
 		color: $white;
@@ -356,10 +359,16 @@ h3.chapter {
 			height: 13px;
 			width: 13px;
 		}
+		&:hover {
+			background-color: darken($grey300, 5%);
+		}
 		&.is-checked {
 			background-color: $blue200;
 			&:before {
 				content: url('../images/check-circle-solid.svg');
+			}
+			&:hover {
+				background-color: darken($blue200, 5%);
 			}
 		}
 	}
@@ -873,6 +882,9 @@ section.download-page-content {
 		border-top: 0;
 		background-color: $grey500;
 	}
+	.no-items-found {
+		display: none;
+	}
 	.download-item {
 		margin-bottom: 100px;
 		h2 {
@@ -883,6 +895,7 @@ section.download-page-content {
 		}
 		hr {
 			height: 3px;
+			margin-top: 1.5rem;
 		}
 		.meta {
 			ul {
@@ -903,24 +916,36 @@ section.download-page-content {
 				}
 			}
 		}
+		.placeholder {
+			width: 100%;
+			height: 250px;
+			background-color: $grey500;
+			position: relative;
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				width: 35%;
+				height: auto;
+				display: block;
+			}
+		}
 		img {
 			@media (max-width: 575px) {
 				margin-bottom: 2rem;
 			}
 		}
 		.download-link {
-
-			// position: relative;
-			// paddin-left: 25px;
 			font-size: 2rem;
 			display: inline-block;
-			margin-top: 3rem;
+			margin-top: 4rem;
 			img {
 				height: 24px;
 				width: 20px;
 				margin-top: -13px;
 				margin-bottom: 0;
-				margin-right: 10px;
+				margin-right: 5px;
 			}
 		}
 	}
@@ -1017,6 +1042,23 @@ section.download-page-content {
 				.historical {
 					margin-left: 6rem;
 				}
+				.show-all,
+				.hide-all {
+					float: right;
+					margin-right: 0;
+					.badge {
+						width: 100px;
+						background-color: $orange100;
+						border-radius: 3px;
+						padding: 7px 14px;
+						&:before {
+							display: none;
+						}
+					}
+				}
+				.show-all {
+					display: none;
+				}
 				@media (max-width: 575px) {
 					ul, span {
 						display: block;
@@ -1029,6 +1071,11 @@ section.download-page-content {
 			}
 			.tags {
 				margin-bottom: 0;
+			}.filter {
+				margin-top: 0;
+				li {
+					margin-right: 2rem;
+				}
 			}
 			hr {
 				height: 3px;

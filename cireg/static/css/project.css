@@ -370,6 +370,8 @@ h3.chapter {
 .filter {
   font-size: 32px;
   font-size: 2rem; }
+  .filter span {
+    color: #032738; }
   .filter .badge.badge-secondary {
     background-color: #ccd3d7;
     color: #ffffff; }
@@ -380,10 +382,14 @@ h3.chapter {
       top: 8px;
       height: 13px;
       width: 13px; }
+    .filter .badge.badge-secondary:hover {
+      background-color: #bec7cc; }
     .filter .badge.badge-secondary.is-checked {
       background-color: #0c4d6c; }
       .filter .badge.badge-secondary.is-checked:before {
         content: url("../images/check-circle-solid.svg"); }
+      .filter .badge.badge-secondary.is-checked:hover {
+        background-color: #093d55; }
 
 figure .figure-caption {
   font-size: 16px;
@@ -799,6 +805,9 @@ section.download-page-content hr {
   border-top: 0;
   background-color: #f7f7f7; }
 
+section.download-page-content .no-items-found {
+  display: none; }
+
 section.download-page-content .download-item {
   margin-bottom: 100px; }
   section.download-page-content .download-item h2 {
@@ -807,7 +816,9 @@ section.download-page-content .download-item {
     font-weight: 900;
     line-height: 1.48; }
   section.download-page-content .download-item hr {
-    height: 3px; }
+    height: 3px;
+    margin-top: 24px;
+    margin-top: 1.5rem; }
   section.download-page-content .download-item .meta ul li {
     font-size: 16px;
     padding: 6px 7px;
@@ -821,6 +832,20 @@ section.download-page-content .download-item {
       @media (max-width: 575px) {
         section.download-page-content .download-item .meta ul li.timestamp {
           margin: 0; } }
+  section.download-page-content .download-item .placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #f7f7f7;
+    position: relative; }
+    section.download-page-content .download-item .placeholder img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
+      width: 35%;
+      height: auto;
+      display: block; }
   @media (max-width: 575px) {
     section.download-page-content .download-item img {
       margin-bottom: 2rem; } }
@@ -828,14 +853,14 @@ section.download-page-content .download-item {
     font-size: 32px;
     font-size: 2rem;
     display: inline-block;
-    margin-top: 48px;
-    margin-top: 3rem; }
+    margin-top: 64px;
+    margin-top: 4rem; }
     section.download-page-content .download-item .download-link img {
       height: 24px;
       width: 20px;
       margin-top: -13px;
       margin-bottom: 0;
-      margin-right: 10px; }
+      margin-right: 5px; }
 
 .content-page {
   background-color: #f7f7f7; }
@@ -948,6 +973,42 @@ section.download-page-content .download-item {
         .content-page section.download-page-content .container .filter .historical {
           margin-left: 96px;
           margin-left: 6rem; }
+        .content-page section.page-content .container .tags .show-all,
+        .content-page section.page-content .container .tags .hide-all,
+        .content-page section.page-content .container .filter .show-all,
+        .content-page section.page-content .container .filter .hide-all,
+        .content-page section.download-page-content .container .tags .show-all,
+        .content-page section.download-page-content .container .tags .hide-all,
+        .content-page section.download-page-content .container .filter .show-all,
+        .content-page section.download-page-content .container .filter .hide-all {
+          float: right;
+          margin-right: 0; }
+          .content-page section.page-content .container .tags .show-all .badge,
+          .content-page section.page-content .container .tags .hide-all .badge,
+          .content-page section.page-content .container .filter .show-all .badge,
+          .content-page section.page-content .container .filter .hide-all .badge,
+          .content-page section.download-page-content .container .tags .show-all .badge,
+          .content-page section.download-page-content .container .tags .hide-all .badge,
+          .content-page section.download-page-content .container .filter .show-all .badge,
+          .content-page section.download-page-content .container .filter .hide-all .badge {
+            width: 100px;
+            background-color: #cf8e17;
+            border-radius: 3px;
+            padding: 7px 14px; }
+            .content-page section.page-content .container .tags .show-all .badge:before,
+            .content-page section.page-content .container .tags .hide-all .badge:before,
+            .content-page section.page-content .container .filter .show-all .badge:before,
+            .content-page section.page-content .container .filter .hide-all .badge:before,
+            .content-page section.download-page-content .container .tags .show-all .badge:before,
+            .content-page section.download-page-content .container .tags .hide-all .badge:before,
+            .content-page section.download-page-content .container .filter .show-all .badge:before,
+            .content-page section.download-page-content .container .filter .hide-all .badge:before {
+              display: none; }
+        .content-page section.page-content .container .tags .show-all,
+        .content-page section.page-content .container .filter .show-all,
+        .content-page section.download-page-content .container .tags .show-all,
+        .content-page section.download-page-content .container .filter .show-all {
+          display: none; }
         @media (max-width: 575px) {
           .content-page section.page-content .container .tags ul, .content-page section.page-content .container .tags span,
           .content-page section.page-content .container .filter ul,
@@ -966,6 +1027,13 @@ section.download-page-content .download-item {
       .content-page section.page-content .container .tags,
       .content-page section.download-page-content .container .tags {
         margin-bottom: 0; }
+      .content-page section.page-content .container .filter,
+      .content-page section.download-page-content .container .filter {
+        margin-top: 0; }
+        .content-page section.page-content .container .filter li,
+        .content-page section.download-page-content .container .filter li {
+          margin-right: 32px;
+          margin-right: 2rem; }
       .content-page section.page-content .container hr,
       .content-page section.download-page-content .container hr {
         height: 3px;
