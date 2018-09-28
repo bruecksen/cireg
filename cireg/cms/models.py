@@ -77,7 +77,7 @@ class ProjectDiaryOverview(TranslatablePage, Page):
 
     def get_context(self, request):
         context = super().get_context(request)
-        entries = ProjectDiaryEntry.objects.child_of(self).live().order_by('-publication_date')
+        entries = ProjectDiaryEntry.objects.child_of(self).live().order_by('-first_published_at')
         # Filter by tag
         tag = request.GET.get('tag')
         if tag:
@@ -118,7 +118,7 @@ class CaseStudyOverview(TranslatablePage, Page):
 
     def get_context(self, request):
         context = super().get_context(request)
-        case_studies = CaseStudy.objects.child_of(self).live().order_by('-publication_date')
+        case_studies = CaseStudy.objects.child_of(self).live().order_by('-first_published_at')
         context['case_studies'] = case_studies
         return context
 
