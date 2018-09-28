@@ -118,7 +118,7 @@ class CaseStudyOverview(TranslatablePage, Page):
 
     def get_context(self, request):
         context = super().get_context(request)
-        case_studies = CaseStudy.objects.child_of(self).live().order_by('-first_published_at')
+        case_studies = CaseStudy.objects.child_of(self).live()
         context['case_studies'] = case_studies
         return context
 
