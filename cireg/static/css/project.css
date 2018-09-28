@@ -226,8 +226,8 @@ p {
         -ms-hyphens: auto;
             hyphens: auto; } }
 
-.rich-text + h2,
-p + h2,
+* + h2,
+* + h2,
 .two-columns + h2 {
   margin-top: 96px;
   margin-top: 6rem; }
@@ -236,12 +236,12 @@ p + h2,
   margin-top: 96px;
   margin-top: 6rem; }
 
-p + h3 {
+* + h3 {
   margin-top: 72px;
   margin-top: 4.5rem; }
 
 .four-columns,
-p + h4 {
+* + h4 {
   margin-top: 48px;
   margin-top: 3rem; }
 
