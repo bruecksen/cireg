@@ -236,8 +236,11 @@ p + h2,
   margin-top: 96px;
   margin-top: 6rem; }
 
+p + h3 {
+  margin-top: 72px;
+  margin-top: 4.5rem; }
+
 .four-columns,
-p + h3,
 p + h4 {
   margin-top: 48px;
   margin-top: 3rem; }
