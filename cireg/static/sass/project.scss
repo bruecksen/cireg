@@ -365,17 +365,21 @@ h3.chapter {
 	}
 }
 figure {
-	height: 75%;
-	img {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
+	@media (min-width: 576px) {
+		height: 75%;
+		img {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.figure-caption {
+			position: absolute;
+			bottom: 0;
+		}
 	}
 	.figure-caption {
 		font-size: 16px;
 		color: $blue100;
-		position: absolute;
-		bottom: 0;
 	}
 }
 

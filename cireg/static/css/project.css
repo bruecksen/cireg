@@ -385,18 +385,21 @@ h3.chapter {
       .filter .badge.badge-secondary.is-checked:before {
         content: url("../images/check-circle-solid.svg"); }
 
-figure {
-  height: 75%; }
-  figure img {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
-  figure .figure-caption {
-    font-size: 16px;
-    color: #032738;
-    position: absolute;
-    bottom: 0; }
+@media (min-width: 576px) {
+  figure {
+    height: 75%; }
+    figure img {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    figure .figure-caption {
+      position: absolute;
+      bottom: 0; } }
+
+figure .figure-caption {
+  font-size: 16px;
+  color: #032738; }
 
 .form-control,
 label {
