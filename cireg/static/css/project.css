@@ -385,21 +385,21 @@ h3.chapter {
       .filter .badge.badge-secondary.is-checked:before {
         content: url("../images/check-circle-solid.svg"); }
 
-@media (min-width: 576px) {
-  figure {
+figure .figure-caption {
+  font-size: 16px;
+  color: #032738; }
+
+@media (min-width: 768px) {
+  .columns-1-1 {
     height: 75%; }
-    figure img {
+    .columns-1-1 img {
       position: relative;
       top: 50%;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
-    figure .figure-caption {
+    .columns-1-1 .figure-caption {
       position: absolute;
       bottom: 0; } }
-
-figure .figure-caption {
-  font-size: 16px;
-  color: #032738; }
 
 .form-control,
 label {
@@ -1041,17 +1041,18 @@ section.download-page-content .download-item {
 
 .case-studies {
   padding-bottom: 200px; }
-  @media (max-width: 575px) {
+  @media (max-width: 992px) {
     .case-studies {
       padding-bottom: 0; } }
   .case-studies .card {
     border: none;
     position: relative;
     cursor: pointer; }
-    @media (max-width: 575px) {
+    @media (max-width: 992px) {
       .case-studies .card {
         margin-bottom: 150px; } }
   .case-studies .card-box {
+    min-height: 150px;
     padding: 40px 40px;
     padding: 2.5rem 2.5rem;
     background-color: #032738;
@@ -1064,7 +1065,7 @@ section.download-page-content .download-item {
     transition: border .2s ease-in;
     width: 91%;
     border: 4px solid #032738; }
-    @media (max-width: 575px) {
+    @media (max-width: 992px) {
       .case-studies .card-box {
         width: 90%;
         padding: 1.8rem 3rem; } }
