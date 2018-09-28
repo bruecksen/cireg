@@ -920,16 +920,17 @@ section.download-page-content {
 .content-page {
 	background-color: $grey500;
 	a {
-		color: $orange100;
-		font-weight: bold;
+		color: $orange200;
+		font-weight: 600;
 		text-decoration: none;
-		border-bottom: 3px solid $grey400;
+		border-bottom: 2px solid $grey500;
 		// display: inline-block;
-		line-height: 24px;
+		// line-height: 24px;
+		transition: border-bottom .2s ease-in;
 		&:hover {
 			text-decoration: none;
-			color: $orange100;
-			border-bottom: 3px solid $orange100;
+			color: $orange200;
+			border-bottom: 2px solid $orange200;
 		}
 		&.badge {
 			line-height: 14px;
