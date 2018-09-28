@@ -286,23 +286,24 @@ h3.chapter {
 	background: transparent;
 	font-size: 16px;
 	text-transform: uppercase;
-	color: $orange100;
-	font-weight: 700;
+	color: $orange200;
+	font-weight: 600;
 	padding: 0;
 	border: none;
-	border-bottom: 3px solid $grey400;
+	border-bottom: 2px solid $grey500;
 	border-radius: 0;
-	transition: border-color .2s linear;
+	transition: border-bottom .2s ease-in;
 	&.focus, 
 	&:focus {
 		box-shadow: 0 0 0 0.4rem rgba(238, 160, 10, 0.5);
 	}
 	&:hover {
-		color: $orange100;
+		color: $orange200;
 		background: transparent;
-		border-color: $orange100;
+		border-color: $orange200;
 	}
 }
+
 .badge {
 	font-size: 16px;
 	text-transform: uppercase;
@@ -1090,6 +1091,10 @@ section.download-page-content {
 	}
 	.show-all {
 		margin: 3rem 0 10rem 0;
+		border-bottom: 2px solid $grey400;
+		&:hover {
+			border-bottom: 2px solid $orange200;
+		}
 		@media (max-width: 575px) {
 			margin: 0 0 8rem 0;
 		}

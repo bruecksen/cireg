@@ -320,21 +320,21 @@ h3.chapter {
   background: transparent;
   font-size: 16px;
   text-transform: uppercase;
-  color: #cf8e17;
-  font-weight: 700;
+  color: #eea00a;
+  font-weight: 600;
   padding: 0;
   border: none;
-  border-bottom: 3px solid #e6e9eb;
+  border-bottom: 2px solid #f7f7f7;
   border-radius: 0;
-  -webkit-transition: border-color .2s linear;
-  transition: border-color .2s linear; }
+  -webkit-transition: border-bottom .2s ease-in;
+  transition: border-bottom .2s ease-in; }
   .btn-secondary.focus, .btn-secondary:focus {
     -webkit-box-shadow: 0 0 0 0.4rem rgba(238, 160, 10, 0.5);
             box-shadow: 0 0 0 0.4rem rgba(238, 160, 10, 0.5); }
   .btn-secondary:hover {
-    color: #cf8e17;
+    color: #eea00a;
     background: transparent;
-    border-color: #cf8e17; }
+    border-color: #eea00a; }
 
 .badge {
   font-size: 16px;
@@ -1028,7 +1028,10 @@ section.download-page-content .download-item {
       bottom: 2.5rem; }
   .project-diary .show-all {
     margin: 48px 0 160px 0;
-    margin: 3rem 0 10rem 0; }
+    margin: 3rem 0 10rem 0;
+    border-bottom: 2px solid #e6e9eb; }
+    .project-diary .show-all:hover {
+      border-bottom: 2px solid #eea00a; }
     @media (max-width: 575px) {
       .project-diary .show-all {
         margin: 0 0 8rem 0; } }
