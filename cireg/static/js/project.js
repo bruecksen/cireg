@@ -46,12 +46,12 @@ $(document).ready(function() {
     });
 
     // toggle dropdown on hover
-    var dropdownIsOpen = false;
-    $('.navbar-nav .nav-item.dropdown').hover(function(){
-        if ($(this).hasClass('show') == dropdownIsOpen) {
-            $(this).find('.dropdown-toggle').dropdown('toggle');
-            dropdownIsOpen = $(this).hasClass('show');
-        }
+    $('.navbar-main .nav-item.dropdown').on('hide.bs.dropdown', function (e) {
+        return false;
+    });
+    $('.navbar-main .nav-item.dropdown').hover(function(){
+        $(this).toggleClass('show');
+        $(this).find('.dropdown-menu').toggleClass('show');
     });
     // store filter for each group
     var filters = {};
