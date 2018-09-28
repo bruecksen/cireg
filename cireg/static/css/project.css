@@ -907,16 +907,26 @@ section.download-page-content .download-item {
           background-color: #f7f7f7;
           padding: 10px 16px;
           line-height: 1; }
+      .content-page section.page-content .container p.date,
+      .content-page section.download-page-content .container p.date {
+        font-size: 16px;
+        color: #6c909e;
+        margin-top: -32px;
+        margin-top: -2rem;
+        line-height: 1;
+        margin-bottom: 32px;
+        margin-bottom: 2rem; }
       .content-page section.page-content .container .tags,
       .content-page section.page-content .container .filter,
       .content-page section.download-page-content .container .tags,
       .content-page section.download-page-content .container .filter {
+        color: #b3bec3;
         font-size: 32px;
         font-size: 2rem;
         margin-bottom: 96px;
         margin-bottom: 6rem;
-        margin-top: 32px;
-        margin-top: 2rem; }
+        margin-top: 128px;
+        margin-top: 8rem; }
         .content-page section.page-content .container .tags ul,
         .content-page section.page-content .container .filter ul,
         .content-page section.download-page-content .container .tags ul,
@@ -927,8 +937,8 @@ section.download-page-content .download-item {
         .content-page section.download-page-content .container .tags span,
         .content-page section.download-page-content .container .filter span {
           float: left;
-          margin-right: 16px;
-          margin-right: 1rem; }
+          margin-right: 41.6px;
+          margin-right: 2.6rem; }
         .content-page section.page-content .container .tags .historical,
         .content-page section.page-content .container .filter .historical,
         .content-page section.download-page-content .container .tags .historical,
@@ -950,12 +960,17 @@ section.download-page-content .download-item {
           .content-page section.download-page-content .container .tags .historical,
           .content-page section.download-page-content .container .filter .historical {
             margin-left: 0; } }
+      .content-page section.page-content .container .tags,
+      .content-page section.download-page-content .container .tags {
+        margin-bottom: 0; }
       .content-page section.page-content .container hr,
       .content-page section.download-page-content .container hr {
         height: 3px;
         border-radius: 2px;
         border-top: 0;
-        background-color: #f7f7f7; }
+        background-color: #f7f7f7;
+        margin-bottom: 32px;
+        margin-bottom: 2rem; }
 
 .project-diary {
   padding-top: 200px; }

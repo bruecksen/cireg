@@ -984,17 +984,25 @@ section.download-page-content {
 					line-height: 1;
 				}
 			}
+			p.date {
+				font-size: 16px;
+				color: $grey100;
+				margin-top: -2rem;
+				line-height: 1;
+				margin-bottom: 2rem;
+			}
 			.tags,
 			.filter {
+				color: $grey200;
 				font-size: 2rem;
 				margin-bottom: 6rem;
-				margin-top: 2rem;
+				margin-top: 8rem;
 				ul {
 					display: inline;
 				}
 				span {
 					float: left;
-					margin-right: 1rem;
+					margin-right: 2.6rem;
 				}
 				.historical {
 					margin-left: 6rem;
@@ -1009,11 +1017,15 @@ section.download-page-content {
 					}
 				}
 			}
+			.tags {
+				margin-bottom: 0;
+			}
 			hr {
 				height: 3px;
 				border-radius: 2px;
 				border-top: 0;
 				background-color: $grey500;
+				margin-bottom: 2rem;
 			}
 		}
 	}
