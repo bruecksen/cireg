@@ -459,6 +459,12 @@ header .navbar-main {
     top: 7.9rem;
     right: 0;
     margin: 0; }
+    @media (max-width: 1199px) {
+      header .navbar-main hr {
+        width: 74%; } }
+    @media (max-width: 991px) {
+      header .navbar-main hr {
+        width: 65%; } }
   header .navbar-main .nav-item {
     margin-left: 22px; }
     header .navbar-main .nav-item .nav-link {

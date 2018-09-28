@@ -462,6 +462,12 @@ header {
 			top: 7.9rem;
 			right: 0;
 			margin: 0;
+			@media (max-width: 1199px) {
+				width: 74%;
+			}
+			@media (max-width: 991px) {
+				width: 65%;
+			}
 		}
 		.nav-item {
 			margin-left: 22px;
