@@ -989,7 +989,9 @@ section.download-page-content .download-item {
     position: relative;
     padding-bottom: 83.2px;
     padding-bottom: 5.2rem;
-    border-radius: 0; }
+    border-radius: 0;
+    -webkit-transition: border-bottom .2s ease-in;
+    transition: border-bottom .2s ease-in; }
     @media (max-width: 575px) {
       .project-diary .card {
         margin-bottom: 50px; } }

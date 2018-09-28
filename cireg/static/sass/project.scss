@@ -1048,6 +1048,7 @@ section.download-page-content {
 		position: relative;
 		padding-bottom: 5.2rem;
 		border-radius: 0;
+		transition: border-bottom .2s ease-in;
 		@media (max-width: 575px) { 
 			margin-bottom: 50px;
 		}
