@@ -809,7 +809,8 @@ section.download-page-content .no-items-found {
   display: none; }
 
 section.download-page-content .download-item {
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  width: 100%; }
   section.download-page-content .download-item h2 {
     margin-top: 0;
     font-size: 33.8px;
