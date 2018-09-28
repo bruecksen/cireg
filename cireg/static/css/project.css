@@ -389,7 +389,7 @@ figure .figure-caption {
   font-size: 16px;
   color: #032738; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .columns-1-1 figure {
     height: 75%; }
     .columns-1-1 figure img {
