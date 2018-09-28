@@ -481,7 +481,7 @@ header {
 			right: 0;
 		}
 
-		@media (max-width: 575px) {
+		@media (max-width: 767px) {
 			.navbar-collapse {
 				position: fixed;
 				top: 120px;
@@ -572,7 +572,7 @@ header {
 			padding-bottom: 18px;
 			.navbar-collapse {
 				top: 0;
-				@media (max-width: 575px) {
+				@media (max-width: 767px) {
 					top: 90px;
 				}
 			}
@@ -599,7 +599,7 @@ header {
 			}
 		}
 	}
-	@media (max-width: 575px) {
+	@media (max-width: 767px) {
 		.navbar-meta {
 			display: block;
 		}
@@ -798,6 +798,15 @@ footer {
 		display: none;
 	}
 }
+.project-diary-overview-page,
+.case-study-overview-page {
+	.header-gradient {
+		display: block;
+		@media (max-width: 767px) {
+			height: 230px;
+		}
+	}
+}
 
 #hero-slider {
 	.carousel-item {
@@ -849,7 +858,7 @@ footer {
 				margin-top: -5px;
 			}
 		}
-		@media (max-width: 575px) {
+		@media (max-width: 767px) {
 			padding: 25px 30px;
 			bottom: unset;
 			top: 125px;

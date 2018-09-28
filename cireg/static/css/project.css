@@ -472,7 +472,7 @@ header .navbar-main {
     position: absolute;
     top: 40px;
     right: 0; }
-  @media (max-width: 575px) {
+  @media (max-width: 767px) {
     header .navbar-main .navbar-collapse {
       position: fixed;
       top: 120px;
@@ -550,7 +550,7 @@ header.medium .navbar-main {
   padding-bottom: 18px; }
   header.medium .navbar-main .navbar-collapse {
     top: 0; }
-    @media (max-width: 575px) {
+    @media (max-width: 767px) {
       header.medium .navbar-main .navbar-collapse {
         top: 90px; } }
   header.medium .navbar-main hr {
@@ -572,7 +572,7 @@ header.medium .navbar-main {
     -webkit-transition: none;
     transition: none; }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   header .navbar-meta {
     display: block; }
   header .navbar-main {
@@ -733,6 +733,14 @@ footer .navbar-footer {
     .header-gradient {
       display: none; } }
 
+.project-diary-overview-page .header-gradient,
+.case-study-overview-page .header-gradient {
+  display: block; }
+  @media (max-width: 767px) {
+    .project-diary-overview-page .header-gradient,
+    .case-study-overview-page .header-gradient {
+      height: 230px; } }
+
 #hero-slider .carousel-item {
   height: 100vh;
   max-height: 650px;
@@ -778,7 +786,7 @@ footer .navbar-footer {
       font-family: 'Assistant', sans-serif;
       margin-bottom: 30px;
       margin-top: -5px; }
-  @media (max-width: 575px) {
+  @media (max-width: 767px) {
     #hero-slider .intro {
       padding: 25px 30px;
       bottom: unset;
