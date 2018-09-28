@@ -390,14 +390,14 @@ figure .figure-caption {
   color: #032738; }
 
 @media (min-width: 768px) {
-  .columns-1-1 {
+  .columns-1-1 figure {
     height: 75%; }
-    .columns-1-1 img {
+    .columns-1-1 figure img {
       position: relative;
       top: 50%;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
-    .columns-1-1 .figure-caption {
+    .columns-1-1 figure .figure-caption {
       position: absolute;
       bottom: 0; } }
 

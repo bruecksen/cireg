@@ -373,15 +373,17 @@ figure {
 
 .columns-1-1 {
 	@media (min-width: 768px) {
-		height: 75%;
-		img {
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
-		}
-		.figure-caption {
-			position: absolute;
-			bottom: 0;
+		figure {
+			height: 75%;
+			img {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			.figure-caption {
+				position: absolute;
+				bottom: 0;
+			}
 		}
 	}
 }
