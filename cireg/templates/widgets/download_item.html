@@ -19,10 +19,10 @@
             <ul class="list-unstyled list-inline">
                 <li class="list-inline-item created">{{ item.first_published_at|date:"d.m.Y" }}</li>
                 {% for energy_type in item.energy_type.all %}
-                <li class="list-inline-item"><a href="{% pageurl page.get_parent %}?tag={{ tag }}" class="badge badge-primary">{{ energy_type.name }}</a></li>
+                <li class="list-inline-item"><a href="#" class="badge badge-primary">{{ energy_type.name }}</a></li>
                 {% endfor %}
                 {% if item.timestamp %}
-                <li class="list-inline-item timestamp"><a href="{% pageurl page.get_parent %}?tag={{ tag }}" class="badge badge-primary">{{ item.timestamp }}</a></li>
+                <li class="list-inline-item timestamp"><a href="#" class="badge badge-primary">{{ item.timestamp }}</a></li>
                 {% endif %}
             </ul>
             <span class="download-link">
