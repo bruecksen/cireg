@@ -312,8 +312,7 @@ h3.chapter {
 		background-color: $blue200;
 		color: $grey500;
 		&:hover {
-			color: $orange100;
-			background-color: $blue200;
+			background: darken($blue200, 5%);
 		}
 	}
 	&.badge-secondary {

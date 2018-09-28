@@ -345,8 +345,7 @@ h3.chapter {
     background-color: #0c4d6c;
     color: #f7f7f7; }
     .badge.badge-primary:hover {
-      color: #cf8e17;
-      background-color: #0c4d6c; }
+      background: #093d55; }
   .badge.badge-secondary {
     background-color: #cf8e17;
     color: #ffffff;
