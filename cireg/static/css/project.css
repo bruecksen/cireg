@@ -236,7 +236,9 @@ p + h2,
   margin-top: 96px;
   margin-top: 6rem; }
 
-.four-columns {
+.four-columns,
+p + h3,
+p + h4 {
   margin-top: 48px;
   margin-top: 3rem; }
 
