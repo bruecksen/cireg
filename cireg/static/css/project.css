@@ -928,7 +928,7 @@ section.download-page-content .download-item {
           /* Firefox/Gecko */
           width: -webkit-max-content;
           /* Chrome */ }
-          @media (max-width: 575px) {
+          @media (max-width: 767px) {
             .content-page section.page-content .container.project-diary h1, .content-page section.page-content .container.case-study-overview h1,
             .content-page section.download-page-content .container.project-diary h1,
             .content-page section.download-page-content .container.case-study-overview h1 {

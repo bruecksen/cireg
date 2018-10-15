@@ -1013,7 +1013,7 @@ section.download-page-content {
 					width: intrinsic;           /* Safari/WebKit uses a non-standard name */
 					width: -moz-max-content;    /* Firefox/Gecko */
 					width: -webkit-max-content; /* Chrome */
-					@media (max-width: 575px) {
+					@media (max-width: 767px) {
 						width: 100%;
 						top: -70px;
 						width: 100%;
