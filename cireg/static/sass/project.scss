@@ -458,16 +458,10 @@ header {
 		hr {
 			position: absolute;
 			border-top: 1px solid $grey300;
-			width: 78%;
 			top: 7.9rem;
 			right: 0;
 			margin: 0;
-			@media (max-width: 1199px) {
-				width: 74%;
-			}
-			@media (max-width: 991px) {
-				width: 65%;
-			}
+			width: 81%;
 		}
 		.nav-item {
 			margin-left: 22px;
@@ -546,6 +540,18 @@ header {
 	&.large {
 		.navbar-main {
 			transition: unset;
+			hr {
+				width: 81%;
+				@media (min-width: 768px) {
+					width: 65%;
+				}
+				@media (min-width: 992px) {
+					width: 74%;
+				}
+				@media (min-width: 1200px) {
+					width: 78%;
+				}
+			}
 			.navbar-brand {
 				img {
 					opacity: 0;
@@ -583,8 +589,16 @@ header {
 				}
 			}
 			hr {
-				width: 81%;
 				top: 4rem;
+				@media (min-width: 768px) {
+					width: 71%;
+				}
+				@media (min-width: 992px) {
+					width: 78%;
+				}
+				@media (min-width: 1200px) {
+					width: 81%;
+				}
 			}
 			.navbar-brand {
 				img {
@@ -1083,6 +1097,9 @@ section.download-page-content {
 						padding: 7px 14px;
 						&:before {
 							display: none;
+						}
+						&:hover {
+							background: darken($orange100, 5%);
 						}
 					}
 				}

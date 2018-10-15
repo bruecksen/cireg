@@ -454,17 +454,11 @@ header .navbar-main {
   header .navbar-main hr {
     position: absolute;
     border-top: 1px solid #ccd3d7;
-    width: 78%;
     top: 126.4px;
     top: 7.9rem;
     right: 0;
-    margin: 0; }
-    @media (max-width: 1199px) {
-      header .navbar-main hr {
-        width: 74%; } }
-    @media (max-width: 991px) {
-      header .navbar-main hr {
-        width: 65%; } }
+    margin: 0;
+    width: 81%; }
   header .navbar-main .nav-item {
     margin-left: 22px; }
     header .navbar-main .nav-item .nav-link {
@@ -528,6 +522,17 @@ header .navbar-meta {
 header.large .navbar-main {
   -webkit-transition: unset;
   transition: unset; }
+  header.large .navbar-main hr {
+    width: 81%; }
+    @media (min-width: 768px) {
+      header.large .navbar-main hr {
+        width: 65%; } }
+    @media (min-width: 992px) {
+      header.large .navbar-main hr {
+        width: 74%; } }
+    @media (min-width: 1200px) {
+      header.large .navbar-main hr {
+        width: 78%; } }
   header.large .navbar-main .navbar-brand img {
     opacity: 0;
     position: absolute; }
@@ -560,9 +565,17 @@ header.medium .navbar-main {
       header.medium .navbar-main .navbar-collapse {
         top: 90px; } }
   header.medium .navbar-main hr {
-    width: 81%;
     top: 64px;
     top: 4rem; }
+    @media (min-width: 768px) {
+      header.medium .navbar-main hr {
+        width: 71%; } }
+    @media (min-width: 992px) {
+      header.medium .navbar-main hr {
+        width: 78%; } }
+    @media (min-width: 1200px) {
+      header.medium .navbar-main hr {
+        width: 81%; } }
   header.medium .navbar-main .navbar-brand img {
     opacity: 0;
     position: absolute; }
@@ -1038,6 +1051,15 @@ section.download-page-content .download-item {
             .content-page section.download-page-content .container .filter .show-all .badge:before,
             .content-page section.download-page-content .container .filter .hide-all .badge:before {
               display: none; }
+            .content-page section.page-content .container .tags .show-all .badge:hover,
+            .content-page section.page-content .container .tags .hide-all .badge:hover,
+            .content-page section.page-content .container .filter .show-all .badge:hover,
+            .content-page section.page-content .container .filter .hide-all .badge:hover,
+            .content-page section.download-page-content .container .tags .show-all .badge:hover,
+            .content-page section.download-page-content .container .tags .hide-all .badge:hover,
+            .content-page section.download-page-content .container .filter .show-all .badge:hover,
+            .content-page section.download-page-content .container .filter .hide-all .badge:hover {
+              background: #b87e14; }
         .content-page section.page-content .container .tags .show-all,
         .content-page section.page-content .container .filter .show-all,
         .content-page section.download-page-content .container .tags .show-all,
