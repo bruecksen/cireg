@@ -661,7 +661,7 @@ header {
 			transition: transform .3s ease-in-out;
 		}
 	}
-	@media (max-width: 575px) {
+	@media (max-width: 767px) {
 		.dropdown-menu {
 			background-color: transparent;
 			border-radius: 0;
@@ -696,8 +696,7 @@ header {
 			}
 		}
 	}
-	@media (min-width: 576px) {
-		&.show {
+	@media (min-width: 768px) {
 			.dropdown-toggle:after {
 				transform: rotate(180deg);
 			}
