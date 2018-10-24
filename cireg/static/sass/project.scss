@@ -697,13 +697,15 @@ header {
 		}
 	}
 	@media (min-width: 768px) {
-		.dropdown-toggle:after {
-			transform: rotate(180deg);
-		}
-		.nav-link {
-			z-index: 2000;
-			color: $blue100;
-			position: relative;
+		&.show {
+			.dropdown-toggle:after {
+				transform: rotate(180deg);
+			}
+			.nav-link {
+				z-index: 2000;
+				color: $blue100;
+				position: relative;
+			}
 		}
 		.dropdown-menu {
 			top: -5px;
@@ -1306,7 +1308,7 @@ section.download-page-content {
 	position: relative;
 	margin-top: 2rem;
 	@media (max-width: 767px) {
-		margin-top: 5rem;
+		margin-top: 4rem;
 	}
 	h4 {
 		text-transform: uppercase;

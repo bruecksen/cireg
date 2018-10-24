@@ -656,10 +656,10 @@ header.medium .navbar-main {
         background-color: transparent; } }
 
 @media (min-width: 768px) {
-  .nav-item.dropdown .dropdown-toggle:after {
+  .nav-item.dropdown.show .dropdown-toggle:after {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
-  .nav-item.dropdown .nav-link {
+  .nav-item.dropdown.show .nav-link {
     z-index: 2000;
     color: #032738;
     position: relative; }
@@ -1259,7 +1259,7 @@ section.download-page-content .download-item {
   margin-top: 2rem; }
   @media (max-width: 767px) {
     .facts {
-      margin-top: 5rem; } }
+      margin-top: 4rem; } }
   .facts h4 {
     text-transform: uppercase;
     font-size: 20px;
