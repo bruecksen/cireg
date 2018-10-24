@@ -1215,9 +1215,9 @@ section.download-page-content {
 		@media (max-width: 992px) { 
 			margin-bottom: 150px;
 		}
-		&:hover > img{
+		// &:hover > img {
 			// transform: scale(1.1);
-		}
+		// }
 	}
 	.card-box {
 		min-height: 150px;
@@ -1397,7 +1397,7 @@ section.download-page-content {
 		transform: translateY(-50%);
 		right: 15px;
 	}
-	@media (max-width: 575px) { 
+	@media (max-width: 575px) {
 		padding-right: 0;
 		padding-bottom: 6rem;
 		.btn-primary {
