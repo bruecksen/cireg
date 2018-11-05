@@ -37,7 +37,9 @@
             </p>
         {% endif %}
         {% if publication.url %}
+        <p class="card-text">
             <a class="" rel="external" target="_blank" href="{{ publication.url }}">{{ publication.url }}</a>
+        </p>
         {% endif %}
     </div>
     {% if publication.tags %}
