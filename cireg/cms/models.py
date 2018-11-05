@@ -173,11 +173,13 @@ TIME_CHOICES = [
 class DownloadOverviewPage(TranslatablePage, Page):
     parent_page_types = ['cms.HomePage', 'cms.ContentPage']
 
-    show_filter = models.BooleanField(default=True)
+    show_energy_type_filter = models.BooleanField(default=True)
+    show_timestamp_filter = models.BooleanField(default=True)
     intro_text = RichTextField(null=True, blank=True)
 
     content_panels = Page.content_panels + [
-        FieldPanel('show_filter'),
+        FieldPanel('show_energy_type_filter'),
+        FieldPanel('show_timestamp_filter'),
         FieldPanel('intro_text'),
     ]
     template = 'pages/download_overview_page.html'

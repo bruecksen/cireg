@@ -8,18 +8,22 @@
         </div>
         <hr>
         {% endif %}
-        {% if page.show_filter %}
+        {% if page.show_energy_type_filter or page.show_timestamp_filter %}
         <div class="filter">
             <span>{% trans "Filter by:" %} </span>
+            {% if page.show_energy_type_filter %}
             <ul class="list-unstyled list-inline button-group" data-filter-group="type">
             {% for energy_type in energy_type_filter %}
                 <li class="list-inline-item"><a href="javascript:void(0)" class="badge badge-secondary is-checked" data-filter=".{{ energy_type.name|slugify }}">{{ energy_type.name }}</a></li>
             {% endfor %}
             </ul>
+            {% endif %}
+            {% if page.show_timestamp_filter %}
             <ul class="list-unstyled list-inline button-group" data-filter-group="time">
                 <li class="list-inline-item historical"><a href="javascript:void(0)"  data-filter=".historical" class="badge badge-secondary is-checked">{% trans "Historical" %}</a></li>
                 <li class="list-inline-item"><a href="javascript:void(0)" data-filter=".future" class="badge badge-secondary is-checked">{% trans "Future" %}</a></li>
             </ul>
+            {% endif %}
             <ul class="list-unstyled list-inline button-group">
                 <li class="list-inline-item show-all"><a href="javascript:void(0)" class="badge badge-secondary">{% trans "Show all" %}</a></li>
                 <li class="list-inline-item hide-all"><a href="javascript:void(0)" class="badge badge-secondary">{% trans "Hide all" %}</a></li>

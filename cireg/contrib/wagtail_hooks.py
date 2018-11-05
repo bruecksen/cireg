@@ -28,3 +28,4 @@ def hide_snippets_menu_item(request, menu_items):
 @hooks.register('register_admin_menu_item')
 def register_publications_menu_item():
     return MenuItem('Publications', reverse('admin:publications_bootstrap_publication_changelist'), classnames='icon icon-folder-inverse', order=10000)
+
