@@ -384,10 +384,10 @@ figure {
 	@media (min-width: 992px) {
 		figure {
 			height: 75%;
-			img {
-				position: relative;
-				top: 50%;
-				transform: translateY(-50%);
+			.figure-img {
+				// height: 100%;
+    			// width: 100%;
+    			// object-fit: cover;
 			}
 			.figure-caption {
 				position: absolute;

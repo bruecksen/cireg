@@ -398,11 +398,6 @@ figure .figure-caption {
 @media (min-width: 992px) {
   .columns-1-1 figure {
     height: 75%; }
-    .columns-1-1 figure img {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%); }
     .columns-1-1 figure .figure-caption {
       position: absolute;
       bottom: 0; } }
