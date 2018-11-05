@@ -1321,6 +1321,10 @@ section.download-page-content .download-item {
   font-size: 32px;
   font-size: 2rem; }
 
+.pubo .card {
+  margin-bottom: 48px;
+  margin-bottom: 3rem; }
+
 .login .btn-primary {
   font-size: 20px;
   padding: 5px 15px; }
