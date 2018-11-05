@@ -46,7 +46,7 @@ urlpatterns = [
     url(r'^cms/', include(wagtailadmin_urls)),
     url(r'^documents/', include(wagtaildocs_urls)),
     # Your stuff: custom urls includes go here
-    url(r'^publications/', decorator_include(group_required('Publications'), ('publications_bootstrap.urls', 'publications_bootstrap'))),
+     url(r'^publications/', include('publications_bootstrap.urls')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
