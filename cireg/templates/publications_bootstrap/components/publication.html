@@ -7,7 +7,7 @@
         </p>
     </div>
     <h3 class="card-header">
-        <a href="{% url 'publications_bootstrap:id' publication.pk %}"
+        <a href="{{ publication.url }}" target="_blank"
            class="title">{{ publication.title|tex_parse }}</a>
     </h3>
     <div class="card-body">

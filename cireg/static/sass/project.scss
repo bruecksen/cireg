@@ -1347,6 +1347,17 @@ section.download-page-content {
 .pubo {
 	h3 {
 		margin-top: 0;
+		line-height: 5rem;
+		a {
+			transition: none;
+			color: $blue100;
+			border-bottom: none;
+			&:hover {
+				text-decoration: none;
+    			color: $blue100;
+    			border-bottom: none;
+			}
+		}
 	}
 	.btn-secondary {
 		margin-left: 2rem;
