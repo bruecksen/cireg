@@ -383,12 +383,7 @@ figure {
 .columns-1-1 {
 	@media (min-width: 992px) {
 		figure {
-			height: 75%;
-			.figure-img {
-				// height: 100%;
-    			// width: 100%;
-    			// object-fit: cover;
-			}
+			margin-bottom: 6rem;
 			.figure-caption {
 				position: absolute;
 				bottom: 0;
