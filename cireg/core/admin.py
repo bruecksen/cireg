@@ -1,3 +1,5 @@
+import os
+
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.html import format_html
@@ -18,7 +20,7 @@ class PublicationAdmin(_PublicationAdmin):
         links = []
         if obj.publicationfile_set.exists():
             publication_file = obj.publicationfile_set.first()
-            return format_html('<a href="{}" target="_blank">{}</a>', publication_file.file.url, publication_file.file.name)
+            return format_html('<a href="{}" target="_blank">{}</a>', publication_file.file.url, os.path.basename(publication_file.file.name))
     get_publication_files.short_description = 'Files'
 
 admin.site.register(Publication, PublicationAdmin)
