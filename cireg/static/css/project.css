@@ -1106,6 +1106,7 @@ section.download-page-content .download-item {
       .project-diary .row {
         margin-bottom: 0; } }
   .project-diary .card {
+    overflow: hidden;
     border: none;
     border-bottom: 4px solid #e6e9eb;
     position: relative;
