@@ -1,5 +1,5 @@
 {% load wagtailimages_tags i18n static %}
-<div class="{% if count == 1 or count == 3%}col-lg-12{% else %}col-lg-6{% endif %} d-flex align-items-stretch">
+<div class="{% if count == 1 or count == 3%}col-lg-12{% else %}col-lg-6{% endif %}">
     <div class="card">
         {% if count == 1 or count == 3 %}
             {% image case_study.teaser_image fill-2160x720 format-jpeg jpegquality-60 class="card-img-top img-fluid h-100" %}

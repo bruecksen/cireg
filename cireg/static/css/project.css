@@ -1165,7 +1165,6 @@ section.download-page-content .download-item {
     .case-studies {
       padding-bottom: 0; } }
   .case-studies .card {
-    overflow: hidden;
     border: none;
     position: relative;
     cursor: pointer; }
