@@ -56,6 +56,13 @@ def pip():
     reload_webserver()
 
 
+def pip_update():
+    with cd(env.path):
+        run("git pull %(push_remote)s %(push_branch)s" % env)
+        run("pipenv update")
+    reload_webserver()
+
+
 def soft_deploy():
     with cd(env.path):
         run("git pull %(push_remote)s %(push_branch)s" % env)
