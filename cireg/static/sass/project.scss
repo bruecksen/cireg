@@ -778,6 +778,14 @@ header {
 			}
 		}
 	}
+	#main-nav .navbar-nav.fr {
+		.nav-item:first-child {
+			.dropdown-menu {
+				width: calc(100% + 10.5rem);
+				right: -15px;
+			}
+		}
+	}
 }
 
 footer {
