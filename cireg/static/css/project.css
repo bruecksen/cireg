@@ -665,6 +665,7 @@ header.medium .navbar-main {
     background-color: #f7f7f7;
     padding-top: 43px;
     padding-bottom: 0;
+    width: calc(100% + 2.5rem);
     border-radius: 3px; }
     .nav-item.dropdown .dropdown-menu.fade {
       display: block;
@@ -716,6 +717,7 @@ header.medium .navbar-main {
 
 @media (min-width: 576px) {
   #main-nav .navbar-nav .nav-item:first-child .dropdown-menu {
+    width: calc(100% + 5.1rem);
     right: -15px; } }
 
 footer .logos {
