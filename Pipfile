@@ -4,8 +4,8 @@ name = "pypi"
 url = "https://pypi.org/simple"
 
 [packages]
-Django = ">=2.2,<2.3"
-wagtail = ">=2.2,<2.3"
+Django = ">=2.2"
+wagtail = ">=2.2"
 django-environ = "*"
 wagtailfontawesome = "*"
 wagtailtrans = "*"
