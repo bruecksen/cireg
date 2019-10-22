@@ -52,14 +52,8 @@ def deploy():
 def pip():
     with cd(env.path):
         run("git pull %(push_remote)s %(push_branch)s" % env)
-        run("pipenv install --deploy")
-    reload_webserver()
+        run("pip install -Ur requirements/production.txt")
 
-
-def pip_update():
-    with cd(env.path):
-        run("git pull %(push_remote)s %(push_branch)s" % env)
-        run("pipenv update")
     reload_webserver()
 
 
