@@ -5,7 +5,7 @@ from django import forms
 
 from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from modelcluster.tags import ClusterTaggableManager
-from wagtailtrans.models import TranslatablePage
+from wagtailtrans.models import TranslatablePage, get_user_language
 from taggit.models import TaggedItemBase, Tag as TaggitTag
 
 from wagtail.core.models import Page
@@ -58,7 +58,6 @@ class HomePage(TranslatablePage, Page):
         )
         project_diary_entries = project_diary_entries.order_by('-is_pinned_post', '-first_published_at')[:3]
         context['project_diary_entries'] = project_diary_entries
-        context['case_studies'] = CaseStudy.objects.live()
         return context
 
 
@@ -144,12 +143,6 @@ class CaseStudy(TranslatablePage, Page):
         StreamFieldPanel('content'),
     ]
     template = 'pages/case_study_page.html'
-
-    def get_context(self, request):
-        context = super().get_context(request)
-        case_studies = self.get_siblings(inclusive=True).live()
-        context['case_studies'] = case_studies
-        return context
 
 
 class ContentPage(TranslatablePage, Page):

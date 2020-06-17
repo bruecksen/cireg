@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from wagtailtrans.models import Language
 
 from cireg.contrib.models import Menu
-from cireg.cms.models import CaseStudy, ProjectDiaryOverview
+from cireg.cms.models import CaseStudy, ProjectDiaryOverview, HomePage
 
 # from impacts_world.core.models import HeaderSettings
 register = template.Library()
@@ -62,6 +62,7 @@ def header(context, *args, **kwargs):
     context['main_menu'] = menu_as_context(main_menu, page)
     context['meta_menu'] = menu_as_context(meta_menu, page)
     context['language'] = language
+    context['language_root'] = HomePage.objects.get(language=language)
 
     context.update(kwargs)
     template = 'widgets/header.html'
@@ -87,9 +88,10 @@ def footer(context, *args, **kwargs):
     return render_to_string(template, context=context.flatten())
 
 
-@register.inclusion_tag('widgets/case_study_list.html')
-def case_study_list():
-    case_studies = CaseStudy.objects.live()
+@register.inclusion_tag('widgets/case_study_list.html', takes_context=True)
+def case_study_list(context):
+    language = context['page'].specific.language
+    case_studies = CaseStudy.objects.live().filter(language=language)
     return {'case_studies': case_studies}
 
 
