@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 13:43+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: cireg/cms/models.py:161
+#: cireg/templates/sections/download-page-content.html:23
+msgid "Historical"
+msgstr ""
+
+#: cireg/cms/models.py:162
+#: cireg/templates/sections/download-page-content.html:24
+msgid "Future"
+msgstr ""
+
+#: cireg/templates/blocks/text_and_facts_block.html:8
+msgid "Facts"
+msgstr ""
+
+#: cireg/templates/cookielaw/banner.html:3
+msgid "COOKIE_INFO_HEADER"
+msgstr ""
+
+#: cireg/templates/cookielaw/banner.html:3
+msgid "COOKIE_INFO_PARA"
+msgstr ""
+
+#: cireg/templates/cookielaw/banner.html:5
+msgid "COOKIE_INFO_OK"
+msgstr ""
+
+#: cireg/templates/pages/project_diary_overview.html:12
+msgid "Entries with the tag"
+msgstr ""
+
+#: cireg/templates/sections/case_study.html:4
+msgid "Case studies"
+msgstr "Études de cas"
+
+#: cireg/templates/sections/download-page-content.html:13
+msgid "Filter by:"
+msgstr ""
+
+#: cireg/templates/sections/download-page-content.html:28
+msgid "Show all"
+msgstr ""
+
+#: cireg/templates/sections/download-page-content.html:29
+msgid "Hide all"
+msgstr ""
+
+#: cireg/templates/sections/download-page-content.html:33
+msgid "No items found."
+msgstr ""
+
+#: cireg/templates/sections/newsletter.html:6
+msgid "Stay up to date with our Newsletter"
+msgstr "Suivez notre actualité grâce à la Newsletter"
+
+#: cireg/templates/sections/newsletter.html:7
+msgid ""
+"Subscribe to our newsletter and stay up to date on the latest development "
+"and updates from CIREG and our Project & Partners. We normally send out a "
+"newsletter every two to three month."
+msgstr "Inscrivez-vous à notre newsletter et restez informé des derniers développements et mises à jour du projet CIREG et de ses partenaires. Nous envoyons normalement un bulletin d'information tous les deux ou trois mois en anglais."
+
+#: cireg/templates/sections/project_diary.html:4
+msgid "Latest project diary"
+msgstr "Les dernières actualités du projet"
+
+#: cireg/templates/sections/project_diary.html:11
+msgid "Show All Project Diaries"
+msgstr "Afficher tous les actualités du projet"
+
+#: cireg/templates/sections/twitter-timeline.html:6
+msgid "Twitter"
+msgstr ""
+
+#: cireg/templates/widgets/download_item.html:30
+msgid "Download"
+msgstr "Télécharger"
+
+#: cireg/templates/widgets/newsletter_form.html:6
+msgid "Email address"
+msgstr "Adresse électronique"
+
+#: cireg/templates/widgets/newsletter_form.html:12
+msgid "First Name"
+msgstr "Prénom"
+
+#: cireg/templates/widgets/newsletter_form.html:18
+msgid "Last Name"
+msgstr "Nom"
+
+#: cireg/templates/widgets/newsletter_form.html:24
+msgid "Company"
+msgstr "Organisme"
+
+#: cireg/templates/widgets/newsletter_form.html:30
+msgid "Subscribe to Newsletter"
+msgstr "S'abonner à la newsletter"
+
+#: cireg/templates/widgets/project_diary_teaser.html:9
+msgid "Read more"
+msgstr "En savoir plus"
+
+#: config/settings/base.py:30
+msgid "English"
+msgstr ""
+
+#: config/settings/base.py:31
+msgid "Frensh"
+msgstr ""

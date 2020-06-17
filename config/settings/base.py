@@ -32,6 +32,10 @@ USE_L10N = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
 USE_TZ = True
 
+LOCALE_PATHS = [
+    str(ROOT_DIR.path('locale')),
+]
+
 # DATABASES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
@@ -140,12 +144,13 @@ AUTH_PASSWORD_VALIDATORS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'wagtail.core.middleware.SiteMiddleware',
+    'wagtailtrans.middleware.TranslationMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
