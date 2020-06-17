@@ -56,7 +56,7 @@ class HomePage(TranslatablePage, Page):
                 default=Value(0),
                 output_field=IntegerField())
         )
-        project_diary_entries = project_diary_entries.order_by('-is_pinned_post', '-first_published_at')[:3]
+        project_diary_entries = project_diary_entries.filter(language=self.language).order_by('-is_pinned_post', '-first_published_at')[:3]
         context['project_diary_entries'] = project_diary_entries
         return context
 
